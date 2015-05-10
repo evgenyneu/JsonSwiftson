@@ -55,13 +55,6 @@
 			remoteGlobalIDString = 7E4E78731AFEF250007D583E;
 			remoteInfo = JsonSwiftson;
 		};
-		7E4E78811AFEF250007D583E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7E4E786B1AFEF250007D583E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E4E78731AFEF250007D583E;
-			remoteInfo = JsonSwiftson;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +106,8 @@
 		7E4E78D71AFEF3F3007D583E /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		7E4E78D81AFEF3F3007D583E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7E4E78D91AFEF3F3007D583E /* TestJsonLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestJsonLoader.swift; sourceTree = "<group>"; };
+		7EEB6D171AFF1D9C009F26B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EEB6D181AFF1D9C009F26B6 /* JsonSwiftsonLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonSwiftsonLogicTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +151,7 @@
 				7E4E78761AFEF250007D583E /* JsonSwiftson */,
 				7E4E78831AFEF250007D583E /* JsonSwiftsonTests */,
 				7E4E78B41AFEF3AF007D583E /* JsonSwiftsonAppDemo */,
+				7EEB6D151AFF1D9C009F26B6 /* JsonSwiftsonLogicTests */,
 				7E4E78751AFEF250007D583E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -262,6 +258,23 @@
 			path = TestData;
 			sourceTree = "<group>";
 		};
+		7EEB6D151AFF1D9C009F26B6 /* JsonSwiftsonLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EEB6D181AFF1D9C009F26B6 /* JsonSwiftsonLogicTests.swift */,
+				7EEB6D161AFF1D9C009F26B6 /* Supporting Files */,
+			);
+			path = JsonSwiftsonLogicTests;
+			sourceTree = "<group>";
+		};
+		7EEB6D161AFF1D9C009F26B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EEB6D171AFF1D9C009F26B6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -305,7 +318,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7E4E78821AFEF250007D583E /* PBXTargetDependency */,
 			);
 			name = JsonSwiftsonTests;
 			productName = JsonSwiftsonTests;
@@ -458,11 +470,6 @@
 			isa = PBXTargetDependency;
 			target = 7E4E78731AFEF250007D583E /* JsonSwiftson */;
 			targetProxy = 7E09F7D11AFEFD2E0013F875 /* PBXContainerItemProxy */;
-		};
-		7E4E78821AFEF250007D583E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7E4E78731AFEF250007D583E /* JsonSwiftson */;
-			targetProxy = 7E4E78811AFEF250007D583E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
