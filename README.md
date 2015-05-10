@@ -164,6 +164,8 @@ let person = Person(
 Verify the `ok` property to see if mapping was successful.
 Mapping fails for incorrect JSON and type casting problems.
 
+**Note**: `map` and `mapArrayOfObjects` methods always return `nil` if mapping fails.
+
 ```Swift
 let successMapper = JsonSwiftson(json: "\"Correct type\"")
 let string: String? = successMapper.map()
@@ -173,8 +175,6 @@ let failMapper = JsonSwiftson(json: "\"Wrong type\"")
 let number: Int? = failMapper.map()
 if !failMapper.ok { println("🐞") }
 ```
-
-**Note**: `map` and `mapArrayOfObjects` methods always return `nil` if mapping fails.
 
 ### Allow missing values
 
