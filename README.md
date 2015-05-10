@@ -238,3 +238,4 @@ Here are some other popular libraries that can help taming JSON in Swift.
 
 If you have a question feel free to create an issue ticket.
 
+### •ᴥ•
