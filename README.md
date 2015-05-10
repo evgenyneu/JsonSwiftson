@@ -12,7 +12,7 @@ A helper class for parsing JSON text and mapping it to Swift types.
 * Support casting to optional types.
 * Check if the mapping was successful.
 * Make sure mapping is fast.
-* Write beautiful and well-tested code 🌅.
+* Write beautiful code 🌅.
 
 ### Example 
 
