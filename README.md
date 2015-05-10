@@ -4,19 +4,19 @@
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
-### The goals of this library
+### The goals of this project
 
 * Map JSON text into Swift structures or classes.
-* Keep the source code of the library tiny by using Swift generics and taking advantage of type casting features of the language.
-* Use just a single method `map()` to handle strings, numbers, booleans and arrays of those types.
+* Keep the library [source code](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) tiny by using Swift generics and taking advantage of type casting features of the language.
+* Expose just a single API method `map()` to handle strings, numbers, booleans and arrays of those types.
 * Support casting to optional types.
 * Check if the mapping was successful.
-* Make mapping fast.
-
+* Make sure mapping is fast.
+* Write beautiful code 🌅.
 
 ### Example 
 
-The following is an example of serializing JSON into a `Person` structure.
+The following is an example of serializing JSON text into a `Person` structure with JsonSwiftson library.
 
 ```
 struct Person {
@@ -133,7 +133,7 @@ let mapper = JsonSwiftson(json:
     "{ \"name\": \"Ted\", \"age\": 51 }" +
   "]")
 
-let value: [Person]? = mapper.mapArrayOfObjects { j in
+let people: [Person]? = mapper.mapArrayOfObjects { j in
   Person(
     name: j["name"].map() ?? "",
     age: j["age"].map() ?? 0
@@ -153,7 +153,7 @@ struct Person {
 
 let mapper = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
 
-let value = Person(
+let person = Person(
   name: mapper["name"].map() ?? "",
   age: mapper["age"].map() ?? 0
 )
@@ -167,11 +167,11 @@ Mapping fails for incorrect JSON and type casting problems.
 ```Swift
 let successMapper = JsonSwiftson(json: "\"Correct type\"")
 let string: String? = successMapper.map()
-successMapper.ok // true
+if successMapper.ok { println("👏👏👏") }
 
 let failMapper = JsonSwiftson(json: "\"Wrong type\"")
 let number: Int? = failMapper.map()
-failMapper.ok // false
+if !failMapper.ok { println("🐞") }
 ```
 
 **Note**: `map` and `mapArrayOfObjects` methods always return `nil` if mapping fails.
@@ -180,12 +180,12 @@ failMapper.ok // false
 
 Mapping fails by default if JSON value is null or attribute is missing.
 
-**Tip:** Pass `optional: true` parameter to `map` or `mapArrayOfObjects` methods to allow missing values.
+**Tip:** Pass `optional: true` parameter to allow missing JSON attributes or null values.
 
 ```Swift
 let mapper = JsonSwiftson(json: "{ }")
 let string: String? = mapper["name"].map(optional: true)
-mapper.ok // true
+if mapper.ok { println("👏👏👏") }
 ```
 
 ### Allow missing objects
@@ -200,34 +200,37 @@ struct Person {
 
 let mapper = JsonSwiftson(json: "null") // empty
 
-let value: Person? = mapper.map(optional: true) { j in
+let person: Person? = mapper.map(optional: true) { j in
   Person(
     name: j["name"].map() ?? "",
     age: j["age"].map() ?? 0
   )
 }
 
-mapper.ok // true
+if mapper.ok { println("👏👏👏") }
 ```
 
-### Tip: map to a non-optional type
+### Tip: map to a non-optional types
 
 Use `??` operator after the mapper if you need to map to a non-optional type like `let number: Int`.
 
 ```Swift
-let mapper = JsonSwiftson(json: "123")
-let number: Int = mapper.map() ?? 0
+let numberMapper = JsonSwiftson(json: "123")
+let number: Int = numberMapper.map() ?? 0
+    
+let arrayMapper = JsonSwiftson(json: "[1, 2, 3]")
+let numbers: [Int] = arrayMapper.map() ?? []
 ```
 
 ### Performance benchmark
 
-This demo app is a performance benchmark. It maps a large JSON file containing 100 records. The process is repeated 100 times.
+The project includes a demo app that runs performance benchmark. It maps a large JSON file containing 100 records. The process is repeated 100 times.
 
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/json_swiftson_screenshot.png' alt='Json Swiftson performance benchmark' width='320'>
 
 ## Alternative solutions
 
-Here are some other popular libraries that can help taming JSON in Swift.
+Here is a list of excellent libraries that can help taming JSON in Swift.
 
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 * [json-swift](https://github.com/owensd/json-swift)
@@ -239,3 +242,4 @@ Here are some other popular libraries that can help taming JSON in Swift.
 
 If you have a question feel free to create an issue ticket.
 
+### •ᴥ•
