@@ -133,7 +133,7 @@ let mapper = JsonSwiftson(json:
     "{ \"name\": \"Ted\", \"age\": 51 }" +
   "]")
 
-let person: [Person]? = mapper.mapArrayOfObjects { j in
+let people: [Person]? = mapper.mapArrayOfObjects { j in
   Person(
     name: j["name"].map() ?? "",
     age: j["age"].map() ?? 0
