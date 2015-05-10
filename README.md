@@ -207,7 +207,7 @@ let person: Person? = mapper.map(optional: true) { j in
   )
 }
 
-mapper.ok // true
+if mapper.ok { println("👏👏👏") }
 ```
 
 ### Tip: map to a non-optional type
