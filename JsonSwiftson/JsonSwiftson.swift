@@ -79,7 +79,7 @@ public final class JsonSwiftson {
   //
   // Map JSON value to an array of objects supplying the closure for its elements.
   //
-  // Tip: use map method instead of mapArrayOfObjects for mapping arrays of simple values
+  // Tip: use `map` method instead of `mapArrayOfObjects` for mapping arrays of simple values
   // like strings, numbers and booleans.
   //
   // Arguments
