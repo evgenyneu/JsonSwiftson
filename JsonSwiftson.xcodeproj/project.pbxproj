@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E09F7C61AFEF4300013F875 /* PeopleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09F7C51AFEF4300013F875 /* PeopleParser.swift */; };
 		7E4E787A1AFEF250007D583E /* JsonSwiftson.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E4E78791AFEF250007D583E /* JsonSwiftson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E4E78801AFEF250007D583E /* JsonSwiftson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4E78741AFEF250007D583E /* JsonSwiftson.framework */; };
 		7E4E78871AFEF250007D583E /* JsonSwiftsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78861AFEF250007D583E /* JsonSwiftsonTests.swift */; };
@@ -31,6 +32,10 @@
 		7E4E78BF1AFEF3AF007D583E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78BE1AFEF3AF007D583E /* Images.xcassets */; };
 		7E4E78C21AFEF3AF007D583E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78C01AFEF3AF007D583E /* LaunchScreen.xib */; };
 		7E4E78CE1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78CD1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.swift */; };
+		7E4E78DA1AFEF3F3007D583E /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D61AFEF3F3007D583E /* Friend.swift */; };
+		7E4E78DB1AFEF3F3007D583E /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78D71AFEF3F3007D583E /* people.json */; };
+		7E4E78DC1AFEF3F3007D583E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D81AFEF3F3007D583E /* Person.swift */; };
+		7E4E78DD1AFEF3F3007D583E /* TestJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D91AFEF3F3007D583E /* TestJsonLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E09F7C51AFEF4300013F875 /* PeopleParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleParser.swift; sourceTree = "<group>"; };
 		7E4E78741AFEF250007D583E /* JsonSwiftson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JsonSwiftson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4E78781AFEF250007D583E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E4E78791AFEF250007D583E /* JsonSwiftson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonSwiftson.h; sourceTree = "<group>"; };
@@ -82,6 +88,10 @@
 		7E4E78C71AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonSwiftsonAppDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4E78CC1AFEF3AF007D583E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E4E78CD1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonSwiftsonAppDemoTests.swift; sourceTree = "<group>"; };
+		7E4E78D61AFEF3F3007D583E /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		7E4E78D71AFEF3F3007D583E /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
+		7E4E78D81AFEF3F3007D583E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7E4E78D91AFEF3F3007D583E /* TestJsonLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestJsonLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +170,7 @@
 		7E4E78831AFEF250007D583E /* JsonSwiftsonTests */ = {
 			isa = PBXGroup;
 			children = (
+				7E4E78D51AFEF3EA007D583E /* TestData */,
 				7E4E789A1AFEF352007D583E /* Performance */,
 				7E4E78921AFEF352007D583E /* arrayWithClosure.swift */,
 				7E4E78931AFEF352007D583E /* byPropertyTests.swift */,
@@ -232,6 +243,18 @@
 				7E4E78CC1AFEF3AF007D583E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E4E78D51AFEF3EA007D583E /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				7E4E78D61AFEF3F3007D583E /* Friend.swift */,
+				7E4E78D71AFEF3F3007D583E /* people.json */,
+				7E4E78D81AFEF3F3007D583E /* Person.swift */,
+				7E4E78D91AFEF3F3007D583E /* TestJsonLoader.swift */,
+				7E09F7C51AFEF4300013F875 /* PeopleParser.swift */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4E78DB1AFEF3F3007D583E /* people.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +437,9 @@
 			files = (
 				7E4E78A81AFEF352007D583E /* peopleTests.swift in Sources */,
 				7E4E78AA1AFEF352007D583E /* rawArrayTests.swift in Sources */,
+				7E4E78DD1AFEF3F3007D583E /* TestJsonLoader.swift in Sources */,
 				7E4E78A31AFEF352007D583E /* optionalArrayElementsWithClosure.swift in Sources */,
+				7E09F7C61AFEF4300013F875 /* PeopleParser.swift in Sources */,
 				7E4E78A61AFEF352007D583E /* optionalTopLevelValueTests.swift in Sources */,
 				7E4E78AC1AFEF352007D583E /* topLevelArrayTests.swift in Sources */,
 				7E4E78AE1AFEF352007D583E /* withClosureTests.swift in Sources */,
@@ -425,7 +451,9 @@
 				7E4E78A51AFEF352007D583E /* optionalTopLevelArrayTests.swift in Sources */,
 				7E4E78A91AFEF352007D583E /* performanceTest.swift in Sources */,
 				7E4E78AD1AFEF352007D583E /* topLevelValueTests.swift in Sources */,
+				7E4E78DC1AFEF3F3007D583E /* Person.swift in Sources */,
 				7E4E78A11AFEF352007D583E /* arrayWithClosure.swift in Sources */,
+				7E4E78DA1AFEF3F3007D583E /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +738,7 @@
 				7E4E788C1AFEF250007D583E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E4E788D1AFEF250007D583E /* Build configuration list for PBXNativeTarget "JsonSwiftsonTests" */ = {
 			isa = XCConfigurationList;
@@ -718,6 +747,7 @@
 				7E4E788F1AFEF250007D583E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E4E78CF1AFEF3AF007D583E /* Build configuration list for PBXNativeTarget "JsonSwiftsonAppDemo" */ = {
 			isa = XCConfigurationList;
@@ -726,6 +756,7 @@
 				7E4E78D11AFEF3AF007D583E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E4E78D21AFEF3AF007D583E /* Build configuration list for PBXNativeTarget "JsonSwiftsonAppDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -734,6 +765,7 @@
 				7E4E78D41AFEF3AF007D583E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
