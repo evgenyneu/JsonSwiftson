@@ -4,7 +4,7 @@
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
-### The goals of this library
+### The goals of this project
 
 * Map JSON text into Swift structures or classes.
 * Keep the library [source code](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) tiny by using Swift generics and taking advantage of type casting features of the language.
@@ -12,6 +12,7 @@ A helper class for parsing JSON text and mapping it to Swift types.
 * Support casting to optional types.
 * Check if the mapping was successful.
 * Make sure mapping is fast.
+* Write beautiful and well-tested code 🌅.
 
 ### Example 
 
