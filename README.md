@@ -133,7 +133,7 @@ let mapper = JsonSwiftson(json:
     "{ \"name\": \"Ted\", \"age\": 51 }" +
   "]")
 
-let value: [Person]? = mapper.mapArrayOfObjects { j in
+let person: [Person]? = mapper.mapArrayOfObjects { j in
   Person(
     name: j["name"].map() ?? "",
     age: j["age"].map() ?? 0
@@ -153,7 +153,7 @@ struct Person {
 
 let mapper = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
 
-let value = Person(
+let person = Person(
   name: mapper["name"].map() ?? "",
   age: mapper["age"].map() ?? 0
 )
@@ -200,7 +200,7 @@ struct Person {
 
 let mapper = JsonSwiftson(json: "null") // empty
 
-let value: Person? = mapper.map(optional: true) { j in
+let person: Person? = mapper.map(optional: true) { j in
   Person(
     name: j["name"].map() ?? "",
     age: j["age"].map() ?? 0
