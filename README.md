@@ -215,8 +215,11 @@ if mapper.ok { println("👏👏👏") }
 Use `??` operator after the mapper if you need to map to a non-optional type like `let number: Int`.
 
 ```Swift
-let mapper = JsonSwiftson(json: "123")
-let number: Int = mapper.map() ?? 0
+let numberMapper = JsonSwiftson(json: "123")
+let number: Int = numberMapper.map() ?? 0
+    
+let arrayMapper = JsonSwiftson(json: "[1, 2, 3]")
+let numbers: [Int] = arrayMapper.map() ?? []
 ```
 
 ### Performance benchmark
