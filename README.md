@@ -4,6 +4,20 @@
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
+```
+struct Person {
+  let name: String
+  let age: Int
+}
+
+let mapper = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
+
+let value: Person? = Person(
+  name: mapper["name"].map() ?? "",
+  age: mapper["age"].map() ?? 0
+)
+```
+
 ## Setup
 
 #### Add the source file (iOS 7+)
