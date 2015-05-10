@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7E09F7C61AFEF4300013F875 /* PeopleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09F7C51AFEF4300013F875 /* PeopleParser.swift */; };
+		7E09F7C71AFEFA710013F875 /* TestJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D91AFEF3F3007D583E /* TestJsonLoader.swift */; };
+		7E09F7C81AFEFBEB0013F875 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78D71AFEF3F3007D583E /* people.json */; };
+		7E09F7CB1AFEFC390013F875 /* TickTock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09F7CA1AFEFC390013F875 /* TickTock.swift */; };
+		7E09F7CC1AFEFC5B0013F875 /* PeopleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09F7C51AFEF4300013F875 /* PeopleParser.swift */; };
+		7E09F7CD1AFEFCA30013F875 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D81AFEF3F3007D583E /* Person.swift */; };
+		7E09F7CE1AFEFCAA0013F875 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D61AFEF3F3007D583E /* Friend.swift */; };
+		7E09F7CF1AFEFD2E0013F875 /* JsonSwiftson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4E78741AFEF250007D583E /* JsonSwiftson.framework */; };
+		7E09F7D01AFEFD2E0013F875 /* JsonSwiftson.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4E78741AFEF250007D583E /* JsonSwiftson.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E4E787A1AFEF250007D583E /* JsonSwiftson.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E4E78791AFEF250007D583E /* JsonSwiftson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E4E78801AFEF250007D583E /* JsonSwiftson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4E78741AFEF250007D583E /* JsonSwiftson.framework */; };
 		7E4E78871AFEF250007D583E /* JsonSwiftsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78861AFEF250007D583E /* JsonSwiftsonTests.swift */; };
@@ -39,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7E09F7D11AFEFD2E0013F875 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E4E786B1AFEF250007D583E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E4E78731AFEF250007D583E;
+			remoteInfo = JsonSwiftson;
+		};
 		7E4E78811AFEF250007D583E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7E4E786B1AFEF250007D583E /* Project object */;
@@ -55,8 +70,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7E09F7D31AFEFD2E0013F875 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7E09F7D01AFEFD2E0013F875 /* JsonSwiftson.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7E09F7C51AFEF4300013F875 /* PeopleParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleParser.swift; sourceTree = "<group>"; };
+		7E09F7CA1AFEFC390013F875 /* TickTock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickTock.swift; sourceTree = "<group>"; };
 		7E4E78741AFEF250007D583E /* JsonSwiftson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JsonSwiftson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4E78781AFEF250007D583E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E4E78791AFEF250007D583E /* JsonSwiftson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonSwiftson.h; sourceTree = "<group>"; };
@@ -114,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E09F7CF1AFEFD2E0013F875 /* JsonSwiftson.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +158,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E09F7C91AFEFC120013F875 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7E09F7CA1AFEFC390013F875 /* TickTock.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		7E4E786A1AFEF250007D583E = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +249,7 @@
 		7E4E78B41AFEF3AF007D583E /* JsonSwiftsonAppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7E09F7C91AFEFC120013F875 /* Utils */,
 				7E4E78B71AFEF3AF007D583E /* AppDelegate.swift */,
 				7E4E78B91AFEF3AF007D583E /* ViewController.swift */,
 				7E4E78BB1AFEF3AF007D583E /* Main.storyboard */,
@@ -314,10 +354,12 @@
 				7E4E78AF1AFEF3AF007D583E /* Sources */,
 				7E4E78B01AFEF3AF007D583E /* Frameworks */,
 				7E4E78B11AFEF3AF007D583E /* Resources */,
+				7E09F7D31AFEFD2E0013F875 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7E09F7D21AFEFD2E0013F875 /* PBXTargetDependency */,
 			);
 			name = JsonSwiftsonAppDemo;
 			productName = JsonSwiftsonAppDemo;
@@ -407,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E09F7C81AFEFBEB0013F875 /* people.json in Resources */,
 				7E4E78BD1AFEF3AF007D583E /* Main.storyboard in Resources */,
 				7E4E78C21AFEF3AF007D583E /* LaunchScreen.xib in Resources */,
 				7E4E78BF1AFEF3AF007D583E /* Images.xcassets in Resources */,
@@ -461,8 +504,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E09F7CD1AFEFCA30013F875 /* Person.swift in Sources */,
+				7E09F7CE1AFEFCAA0013F875 /* Friend.swift in Sources */,
 				7E4E78BA1AFEF3AF007D583E /* ViewController.swift in Sources */,
+				7E09F7CC1AFEFC5B0013F875 /* PeopleParser.swift in Sources */,
+				7E09F7CB1AFEFC390013F875 /* TickTock.swift in Sources */,
 				7E4E78B81AFEF3AF007D583E /* AppDelegate.swift in Sources */,
+				7E09F7C71AFEFA710013F875 /* TestJsonLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +525,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7E09F7D21AFEFD2E0013F875 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E4E78731AFEF250007D583E /* JsonSwiftson */;
+			targetProxy = 7E09F7D11AFEFD2E0013F875 /* PBXContainerItemProxy */;
+		};
 		7E4E78821AFEF250007D583E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7E4E78731AFEF250007D583E /* JsonSwiftson */;
@@ -546,7 +599,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -588,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -670,7 +723,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = JsonSwiftsonAppDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -681,7 +734,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JsonSwiftsonAppDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

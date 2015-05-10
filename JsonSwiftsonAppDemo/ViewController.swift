@@ -11,20 +11,21 @@ class ViewController: UIViewController {
   }
   
   @IBAction func onMapJsonToSwiftTapped(sender: AnyObject) {
-//    let json = TestJsonLoader.read("people.json")
-//    
-//    let tick = TegTickTock()
-//    
-//    for i in 1...100 {
-//      let people = PeopleParser.parse(json)
-//      
-//      if people.isEmpty {
-//        outputLabel.text = "Mapping error"
-//        return
-//      }
-//    }
-//    
-//    tick.outputView(message: "Time: ")
+    let json = TestJsonLoader().read("people.json")
+
+    let tick = TickTock()
+    
+    for i in 1...100 {
+      let people = PeopleParser.parse(json)
+      
+      if people.isEmpty {
+        outputLabel.text = "Mapping error"
+        return
+      }
+    }
+    
+    let timeElapsed = tick.formatted()
+    outputLabel.text = "Time: \(timeElapsed)"    
   }
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {

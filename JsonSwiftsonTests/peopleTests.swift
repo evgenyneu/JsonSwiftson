@@ -8,8 +8,7 @@ import JsonSwiftson
 
 class mapPeopleTests: XCTestCase {
   func testMapPeople() {
-    let bundle = NSBundle(forClass: self.dynamicType)
-    let json = TestJsonLoader.read("people.json", bundle: bundle)
+    let json = TestJsonLoader().read("people.json")
 
     let people = PeopleParser.parse(json)
 
