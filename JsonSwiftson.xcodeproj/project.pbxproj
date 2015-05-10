@@ -39,7 +39,6 @@
 		7E4E78BD1AFEF3AF007D583E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78BB1AFEF3AF007D583E /* Main.storyboard */; };
 		7E4E78BF1AFEF3AF007D583E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78BE1AFEF3AF007D583E /* Images.xcassets */; };
 		7E4E78C21AFEF3AF007D583E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78C01AFEF3AF007D583E /* LaunchScreen.xib */; };
-		7E4E78CE1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78CD1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.swift */; };
 		7E4E78DA1AFEF3F3007D583E /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D61AFEF3F3007D583E /* Friend.swift */; };
 		7E4E78DB1AFEF3F3007D583E /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78D71AFEF3F3007D583E /* people.json */; };
 		7E4E78DC1AFEF3F3007D583E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D81AFEF3F3007D583E /* Person.swift */; };
@@ -60,13 +59,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7E4E78731AFEF250007D583E;
 			remoteInfo = JsonSwiftson;
-		};
-		7E4E78C81AFEF3AF007D583E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7E4E786B1AFEF250007D583E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E4E78B21AFEF3AF007D583E;
-			remoteInfo = JsonSwiftsonAppDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -115,9 +107,6 @@
 		7E4E78BC1AFEF3AF007D583E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E4E78BE1AFEF3AF007D583E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7E4E78C11AFEF3AF007D583E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7E4E78C71AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonSwiftsonAppDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E4E78CC1AFEF3AF007D583E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E4E78CD1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonSwiftsonAppDemoTests.swift; sourceTree = "<group>"; };
 		7E4E78D61AFEF3F3007D583E /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		7E4E78D71AFEF3F3007D583E /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		7E4E78D81AFEF3F3007D583E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -148,13 +137,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E4E78C41AFEF3AF007D583E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -172,7 +154,6 @@
 				7E4E78761AFEF250007D583E /* JsonSwiftson */,
 				7E4E78831AFEF250007D583E /* JsonSwiftsonTests */,
 				7E4E78B41AFEF3AF007D583E /* JsonSwiftsonAppDemo */,
-				7E4E78CA1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests */,
 				7E4E78751AFEF250007D583E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,7 +164,6 @@
 				7E4E78741AFEF250007D583E /* JsonSwiftson.framework */,
 				7E4E787F1AFEF250007D583E /* JsonSwiftsonTests.xctest */,
 				7E4E78B31AFEF3AF007D583E /* JsonSwiftsonAppDemo.app */,
-				7E4E78C71AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,23 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				7E4E78B61AFEF3AF007D583E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7E4E78CA1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				7E4E78CD1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.swift */,
-				7E4E78CB1AFEF3AF007D583E /* Supporting Files */,
-			);
-			path = JsonSwiftsonAppDemoTests;
-			sourceTree = "<group>";
-		};
-		7E4E78CB1AFEF3AF007D583E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7E4E78CC1AFEF3AF007D583E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -366,24 +329,6 @@
 			productReference = 7E4E78B31AFEF3AF007D583E /* JsonSwiftsonAppDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7E4E78C61AFEF3AF007D583E /* JsonSwiftsonAppDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7E4E78D21AFEF3AF007D583E /* Build configuration list for PBXNativeTarget "JsonSwiftsonAppDemoTests" */;
-			buildPhases = (
-				7E4E78C31AFEF3AF007D583E /* Sources */,
-				7E4E78C41AFEF3AF007D583E /* Frameworks */,
-				7E4E78C51AFEF3AF007D583E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7E4E78C91AFEF3AF007D583E /* PBXTargetDependency */,
-			);
-			name = JsonSwiftsonAppDemoTests;
-			productName = JsonSwiftsonAppDemoTests;
-			productReference = 7E4E78C71AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -401,10 +346,6 @@
 					};
 					7E4E78B21AFEF3AF007D583E = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					7E4E78C61AFEF3AF007D583E = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 7E4E78B21AFEF3AF007D583E;
 					};
 				};
 			};
@@ -424,7 +365,6 @@
 				7E4E78731AFEF250007D583E /* JsonSwiftson */,
 				7E4E787E1AFEF250007D583E /* JsonSwiftsonTests */,
 				7E4E78B21AFEF3AF007D583E /* JsonSwiftsonAppDemo */,
-				7E4E78C61AFEF3AF007D583E /* JsonSwiftsonAppDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -453,13 +393,6 @@
 				7E4E78BD1AFEF3AF007D583E /* Main.storyboard in Resources */,
 				7E4E78C21AFEF3AF007D583E /* LaunchScreen.xib in Resources */,
 				7E4E78BF1AFEF3AF007D583E /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E4E78C51AFEF3AF007D583E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,14 +447,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E4E78C31AFEF3AF007D583E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E4E78CE1AFEF3AF007D583E /* JsonSwiftsonAppDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -534,11 +459,6 @@
 			isa = PBXTargetDependency;
 			target = 7E4E78731AFEF250007D583E /* JsonSwiftson */;
 			targetProxy = 7E4E78811AFEF250007D583E /* PBXContainerItemProxy */;
-		};
-		7E4E78C91AFEF3AF007D583E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7E4E78B21AFEF3AF007D583E /* JsonSwiftsonAppDemo */;
-			targetProxy = 7E4E78C81AFEF3AF007D583E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -740,40 +660,6 @@
 			};
 			name = Release;
 		};
-		7E4E78D31AFEF3AF007D583E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = JsonSwiftsonAppDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonSwiftsonAppDemo.app/JsonSwiftsonAppDemo";
-			};
-			name = Debug;
-		};
-		7E4E78D41AFEF3AF007D583E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = JsonSwiftsonAppDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonSwiftsonAppDemo.app/JsonSwiftsonAppDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -809,15 +695,6 @@
 			buildConfigurations = (
 				7E4E78D01AFEF3AF007D583E /* Debug */,
 				7E4E78D11AFEF3AF007D583E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7E4E78D21AFEF3AF007D583E /* Build configuration list for PBXNativeTarget "JsonSwiftsonAppDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7E4E78D31AFEF3AF007D583E /* Debug */,
-				7E4E78D41AFEF3AF007D583E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
