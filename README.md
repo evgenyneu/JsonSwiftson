@@ -50,7 +50,7 @@ github "evgenyneu/JsonSwiftson" ~> 1.0
 
 #### Setup with CocoaPods (iOS 8+)
 
-If you are using CocoaPods add this line to your Podfile:
+If you are using CocoaPods add this text to your Podfile:
 
 ```Podfile
 use_frameworks!
