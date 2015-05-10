@@ -29,7 +29,7 @@ pod 'JsonSwiftson', '~> 1.0'
 
 ## Usage
 
-1. Add `import JsonSwiftson` to your file if you did Carthage or CocoaPods setup.
+1. Add `import JsonSwiftson` to your source code if you used Carthage or CocoaPods setup.
 1. Create an instance of `JsonSwiftson` class.
 1. Call `map` or `mapArrayOfObjects` methods.
 1. Optionally, check `ok` property to see if mapping was successful.
