@@ -180,7 +180,7 @@ if !failMapper.ok { println("🐞") }
 
 Mapping fails by default if JSON value is null or attribute is missing.
 
-**Tip:** Pass `optional: true` parameter to allow missing JSON attributes or null values.
+**Tip:** Pass `optional: true` parameter to allow missing JSON attributes and null values.
 
 ```Swift
 let mapper = JsonSwiftson(json: "{ }")
