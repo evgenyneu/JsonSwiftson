@@ -22,7 +22,7 @@ Finally, if you are using CocoaPods, add this line to your Podfile.
 
 ```Podfile
 use_frameworks!
-pod 'JsonSwiftson'
+pod 'JsonSwiftson', '~> 1.0'
 ```
 
 ## Usage
