@@ -42,7 +42,7 @@ Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/m
 
 #### Setup with Carthage (iOS 8+)
 
-Alternatively, you can setup it up with Carthage by adding the following line to you Cartfile:
+Alternatively, you can setup it up with Carthage by adding the following line to your Cartfile:
 
 ```
 github "evgenyneu/JsonSwiftson" ~> 1.0
