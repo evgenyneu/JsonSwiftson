@@ -1,25 +1,34 @@
-//
-//  ViewController.swift
-//  JsonSwiftsonAppDemo
-//
-//  Created by Evgenii Neumerzhitckii on 10/05/2015.
-//  Copyright (c) 2015 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var outputLabel: UILabel!
+  @IBOutlet weak var button: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    outputLabel.text = ""
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  
+  @IBAction func onMapJsonToSwiftTapped(sender: AnyObject) {
+//    let json = TestJsonLoader.read("people.json")
+//    
+//    let tick = TegTickTock()
+//    
+//    for i in 1...100 {
+//      let people = PeopleParser.parse(json)
+//      
+//      if people.isEmpty {
+//        outputLabel.text = "Mapping error"
+//        return
+//      }
+//    }
+//    
+//    tick.outputView(message: "Time: ")
   }
-
-
+  
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
+  }
 }
 
