@@ -15,7 +15,7 @@ A helper class for parsing JSON text and mapping it to Swift types.
 
 ### Example 
 
-The following is an example of serializing JSON into a `Person` structure with JsonSwiftson library.
+The following is an example of serializing JSON text into a `Person` structure with JsonSwiftson library.
 
 ```
 struct Person {
