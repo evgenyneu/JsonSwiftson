@@ -8,7 +8,7 @@ A helper class for parsing JSON text and mapping it to Swift types.
 
 #### Add the source file (iOS 7+)
 
-Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/Lib/JsonSwiftson.swift) file to your Xcode project.
+Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) file to your Xcode project.
 
 #### Setup with Carthage (iOS 8+)
 
