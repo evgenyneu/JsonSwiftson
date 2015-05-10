@@ -4,11 +4,43 @@
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
+### The goals of this library
+
+* Map JSON text into Swift structures or classes.
+* Keep the source code of the library tiny by using Swift generics and taking advantage of type casting features of the language.
+* Use just a single method `map()` to handle strings, numbers, booleans and arrays of those types.
+* Support casting to optional types.
+* Check if the mapping was successful.
+* Make mapping fast.
+
+
+### Example 
+
+The following is an example of serializing JSON into a `Person` structure.
+
+```
+struct Person {
+  let name: String
+  let age: Int
+}
+
+let j = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
+
+let person = Person(
+  name: j["name"].map() ?? "",
+  age: j["age"].map() ?? 0
+)
+
+if !j.ok { /* report error */ }
+```
+
 ## Setup
 
-Copy [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/Lib/JsonSwiftson.swift) file to your Xcode project.
+#### Add the source file (iOS 7+)
 
-### Setup with Carthage
+Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) file to your Xcode project.
+
+#### Setup with Carthage (iOS 8+)
 
 Alternatively, you can setup it up with Carthage by adding the following line to you Cartfile:
 
@@ -16,17 +48,18 @@ Alternatively, you can setup it up with Carthage by adding the following line to
 github "evgenyneu/JsonSwiftson" ~> 1.0
 ```
 
-### Setup with CocoaPods
+#### Setup with CocoaPods (iOS 8+)
 
-Finally, if you are using CocoaPods, add this line to your Podfile.
+If you are using CocoaPods add this line to your Podfile:
 
 ```Podfile
 use_frameworks!
-pod 'JsonSwiftson'
+pod 'JsonSwiftson', '~> 1.0'
 ```
 
 ## Usage
 
+1. Add `import JsonSwiftson` to your source code if you used Carthage or CocoaPods setup.
 1. Create an instance of `JsonSwiftson` class.
 1. Call `map` or `mapArrayOfObjects` methods.
 1. Optionally, check `ok` property to see if mapping was successful.
@@ -120,7 +153,7 @@ struct Person {
 
 let mapper = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
 
-let value: Person? = Person(
+let value = Person(
   name: mapper["name"].map() ?? "",
   age: mapper["age"].map() ?? 0
 )
