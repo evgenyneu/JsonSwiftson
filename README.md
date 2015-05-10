@@ -4,18 +4,33 @@
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
+### The goals of this library
+
+* Map JSON text into Swift structures or classes.
+* Make the mapping library tiny by using Swift generics.
+* Use a single method called `map` for simple types like strings, numbers and arrays and let Swift generics do the type casting.
+* Support casting to optional types.
+* Check if the mapping was successful.
+
+
+### Example 
+
+The following is an example of serializing JSON into a `Person` structure.
+
 ```
 struct Person {
   let name: String
   let age: Int
 }
 
-let mapper = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
+let j = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
 
-let value: Person? = Person(
-  name: mapper["name"].map() ?? "",
-  age: mapper["age"].map() ?? 0
+let person = Person(
+  name: j["name"].map() ?? "",
+  age: j["age"].map() ?? 0
 )
+
+if !j.ok { /* report error */ }
 ```
 
 ## Setup
@@ -137,7 +152,7 @@ struct Person {
 
 let mapper = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
 
-let value: Person? = Person(
+let value = Person(
   name: mapper["name"].map() ?? "",
   age: mapper["age"].map() ?? 0
 )
