@@ -1,31 +1,37 @@
 //
 // Map JSON to Swift types.
 //
-// Example:
+// Example
 // -------
 //
-//   let j = JsonSwiftson(json: "{ \"name\": \"Peter\" }")
-//   let name: String = j["name"].map() ?? ""
-//   if !j.ok { /* report failure */ }
+//  struct Person {
+//    let name: String
+//    let age: Int
+//  }
+//
+//  let j = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
+//
+//  let person = Person(
+//    name: j["name"].map() ?? "",
+//    age: j["age"].map() ?? 0
+//  )
+//
+//  if !j.ok { /* report error */ }
 //
 
 import Foundation
 
 public final class JsonSwiftson {
-  // Contains the result or mapping. If false - mapping has failed.
-  public var ok = true
-
-  private var parsedRawValue: AnyObject?
-  private let parent: JsonSwiftson?
+  
+  // -----------------------------------------------------------------------------
+  // MARK: - External API
+  // -----------------------------------------------------------------------------
+  
+  public var ok = true // Indicates if the mapping was successful.
 
   public init(json: String) {
     self.parent = nil
     parsedRawValue = JsonSwiftson.parseRaw(json)
-  }
-
-  private init(anyObject: AnyObject?, parent: JsonSwiftson) {
-    self.parent = parent
-    parsedRawValue = anyObject
   }
 
   //
@@ -48,21 +54,22 @@ public final class JsonSwiftson {
     withClosure closure: ((JsonSwiftson)->(T?))? = nil) -> T? {
 
     if optional && parsedRawValue is NSNull {
-      // Value can be optional
-      return nil
+      return nil // Value can be optional
     }
 
-    if let currentClosure = closure {
-      let result = currentClosure(self)
+    if let closure = closure {
+      
+      let result = closure(self)
       if !ok { return nil }
       return result
+      
     } else {
-      if let currentValue = parsedRawValue as? T {
-        return currentValue
+      if let value = parsedRawValue as? T {
+        return value
       }
     }
 
-    // Parsing error
+    // Mapping has failed
     reportError()
     return nil
   }
@@ -85,11 +92,11 @@ public final class JsonSwiftson {
     withClosure closure: (JsonSwiftson)->(T.Generator.Element)) -> T? {
 
     if optional && parsedRawValue is NSNull {
-      // Value can be optional
-      return nil
+      return nil // Value can be optional
     }
 
     if let items = parsedRawValue as? NSArray {
+      
       var parsedItems = Array<T.Generator.Element>()
 
       for item in items {
@@ -100,64 +107,82 @@ public final class JsonSwiftson {
       }
       
       return parsedItems as? T
+      
     } else {
-      // Not an array
+      // Error - value is not an array
       reportError()
       return nil
     }
   }
+  
+  //
+  // Return a new parser for the attribute.
+  //
+  public subscript(name: String) -> JsonSwiftson {
+    if let dictionary = parsedRawValue as? NSDictionary {
+      
+      if let value: AnyObject = dictionary[name] as AnyObject? {
+        
+        // Property does exist in the dictionary
+        return JsonSwiftson(anyObject: value, parent: self)
+        
+      } else {
+        
+        // Property does NOT exist
+        return JsonSwiftson(anyObject: NSNull(), parent: self)
+        
+      }
+      
+    } else {
+      
+      // Failed to cast JSON to dictionary
+      reportError()
+      return JsonSwiftson(json: "")
+      
+    }
+  }
+  
+  // -----------------------------------------------------------------------------
+  // MARK: - Internal functionality
+  // -----------------------------------------------------------------------------
+  
+  private var parsedRawValue: AnyObject?
+  private let parent: JsonSwiftson?
+  
+  private init(anyObject: AnyObject?, parent: JsonSwiftson) {
+    self.parent = parent
+    parsedRawValue = anyObject
+  }
 
   //
-  // Parses string into AnyObject.
-  // This function is used internally during initialization.
+  // Parse string into AnyObject. This function is used internally during initialization.
   //
-  // Return value:
+  // Return value
+  // ------------
   //
   //  Returns an object that can be converted to a Swift type.
   //  Returns nil if parsing failed.
   //  Note: null JSON values are parsed as NSNull objects and not as nil values.
   //
-  public static func parseRaw(json: String) -> AnyObject? {
+  static func parseRaw(json: String) -> AnyObject? {
 
-    let encoded = json.dataUsingEncoding(NSUTF8StringEncoding)
-
-    if let currentEncoded = encoded {
+    if let encoded = json.dataUsingEncoding(NSUTF8StringEncoding) {
       var error: NSError?
 
-      let parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(currentEncoded,
+      let parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(encoded,
         options: NSJSONReadingOptions.AllowFragments,
         error: &error)
 
-      if error != nil { return nil } // parsing error
+      if error != nil { return nil } // failed to parse data to JSON
 
       return parsedObject
     }
 
-    return nil // dataUsingEncoding failed
-  }
-
-  // Returns a new parser for the attribute
-  public subscript(name: String) -> JsonSwiftson {
-    if let currentDict = parsedRawValue as? NSDictionary {
-      if let currentValue: AnyObject = currentDict[name] as AnyObject? {
-        // Value exists in the property
-        return JsonSwiftson(anyObject: currentValue, parent: self)
-      } else {
-        // Property does not exist
-        return JsonSwiftson(anyObject: NSNull(), parent: self)
-      }
-    } else {
-      // Parent JSON is not an object
-      reportError()
-      return JsonSwiftson(json: "")
-    }
+    return nil // failed to convert text to NSData
   }
 
   private func reportError() {
-    if let currentParent = parent {
-      currentParent.reportError()
-    }
-
+    parent?.reportError()
     ok = false
   }
 }

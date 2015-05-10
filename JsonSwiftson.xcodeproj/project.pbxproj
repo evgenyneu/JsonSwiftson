@@ -43,6 +43,8 @@
 		7E4E78DB1AFEF3F3007D583E /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78D71AFEF3F3007D583E /* people.json */; };
 		7E4E78DC1AFEF3F3007D583E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D81AFEF3F3007D583E /* Person.swift */; };
 		7E4E78DD1AFEF3F3007D583E /* TestJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D91AFEF3F3007D583E /* TestJsonLoader.swift */; };
+		7EEB6D0E1AFF1604009F26B6 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
+		7EEB6D0F1AFF1A28009F26B6 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -427,6 +429,7 @@
 				7E4E78A51AFEF352007D583E /* optionalTopLevelArrayTests.swift in Sources */,
 				7E4E78A91AFEF352007D583E /* performanceTest.swift in Sources */,
 				7E4E78AD1AFEF352007D583E /* topLevelValueTests.swift in Sources */,
+				7EEB6D0E1AFF1604009F26B6 /* JsonSwiftson.swift in Sources */,
 				7E4E78DC1AFEF3F3007D583E /* Person.swift in Sources */,
 				7E4E78A11AFEF352007D583E /* arrayWithClosure.swift in Sources */,
 				7E4E78DA1AFEF3F3007D583E /* Friend.swift in Sources */,
@@ -441,6 +444,7 @@
 				7E09F7CE1AFEFCAA0013F875 /* Friend.swift in Sources */,
 				7E4E78BA1AFEF3AF007D583E /* ViewController.swift in Sources */,
 				7E09F7CC1AFEFC5B0013F875 /* PeopleParser.swift in Sources */,
+				7EEB6D0F1AFF1A28009F26B6 /* JsonSwiftson.swift in Sources */,
 				7E09F7CB1AFEFC390013F875 /* TickTock.swift in Sources */,
 				7E4E78B81AFEF3AF007D583E /* AppDelegate.swift in Sources */,
 				7E09F7C71AFEFA710013F875 /* TestJsonLoader.swift in Sources */,
