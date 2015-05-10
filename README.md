@@ -224,7 +224,7 @@ let numbers: [Int] = arrayMapper.map() ?? []
 
 ### Performance benchmark
 
-This demo app is a performance benchmark. It maps a large JSON file containing 100 records. The process is repeated 100 times.
+The project includes a demo app that runs performance benchmark. It maps a large JSON file containing 100 records. The process is repeated 100 times.
 
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/json_swiftson_screenshot.png' alt='Json Swiftson performance benchmark' width='320'>
 
