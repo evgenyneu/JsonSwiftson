@@ -230,7 +230,7 @@ This demo app is a performance benchmark. It maps a large JSON file containing 1
 
 ## Alternative solutions
 
-Here are some other popular libraries that can help taming JSON in Swift.
+Here is the list of excellent libraries that can help taming JSON in Swift.
 
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 * [json-swift](https://github.com/owensd/json-swift)
