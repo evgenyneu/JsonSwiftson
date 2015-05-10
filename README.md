@@ -6,13 +6,11 @@ A helper class for parsing JSON text and mapping it to Swift types.
 
 ## Setup
 
-There are three ways to setup JsonSwiftson.
-
-### Add source file (iOS 7+)
+#### Add source file (iOS 7+)
 
 Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/Lib/JsonSwiftson.swift) file to your Xcode project.
 
-### Setup with Carthage (iOS 8+)
+#### Setup with Carthage (iOS 8+)
 
 Alternatively, you can setup it up with Carthage by adding the following line to you Cartfile:
 
@@ -20,9 +18,9 @@ Alternatively, you can setup it up with Carthage by adding the following line to
 github "evgenyneu/JsonSwiftson" ~> 1.0
 ```
 
-### Setup with CocoaPods (iOS 8+)
+#### Setup with CocoaPods (iOS 8+)
 
-Finally, if you are using CocoaPods, add this line to your Podfile.
+If you are using CocoaPods add this line to your Podfile.
 
 ```Podfile
 use_frameworks!
