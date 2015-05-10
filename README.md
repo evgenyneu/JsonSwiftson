@@ -8,7 +8,7 @@ A helper class for parsing JSON text and mapping it to Swift types.
 
 * Map JSON text into Swift structures or classes.
 * Keep the source code of the library tiny by using Swift generics.
-* Use a single method `map()` to handle strings, numbers, booleans and simple arrays.
+* Use just a single method `map()` to handle strings, numbers, booleans and arrays of those types.
 * Support casting to optional types.
 * Check if the mapping was successful.
 * Make mapping fast.
