@@ -12,8 +12,6 @@ A helper class for parsing JSON text and mapping it to Swift types.
 * Support casting to optional types.
 * Check if the mapping was successful.
 * Make sure mapping is fast.
-* Use test-driven development approach for writing the library code.
-
 
 ### Example 
 
