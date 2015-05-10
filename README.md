@@ -167,11 +167,11 @@ Mapping fails for incorrect JSON and type casting problems.
 ```Swift
 let successMapper = JsonSwiftson(json: "\"Correct type\"")
 let string: String? = successMapper.map()
-successMapper.ok // true
+if successMapper.ok { println("👏👏👏") }
 
 let failMapper = JsonSwiftson(json: "\"Wrong type\"")
 let number: Int? = failMapper.map()
-failMapper.ok // false
+if !failMapper.ok { println("🐞") }
 ```
 
 **Note**: `map` and `mapArrayOfObjects` methods always return `nil` if mapping fails.
