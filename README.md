@@ -1,10 +1,10 @@
-<img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='256' alt='JsonSwiftson JSON parser for Swift' >
-
 # A JSON mapper for iOS/Swift
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![MIT License](https://img.shields.io/badge/license-MIT-yellow.svg?style=flat)](https://github.com/evgenyneu/JsonSwiftson/blob/master/LICENSE)
 
 A helper class for parsing JSON text and mapping it to Swift types.
+
+<img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='256' alt='JsonSwiftson JSON parser for Swift'>
 
 ### The goals of this project
 
