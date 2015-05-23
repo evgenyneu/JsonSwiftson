@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name        = "JsonSwiftson"
-  s.version     = "1.0.7"
+  s.version     = "1.0.8"
   s.license     = { :type => "MIT" }
   s.homepage    = "https://github.com/evgenyneu/JsonSwiftson"
   s.summary     = "Parses JSON and maps it to Swift types."
   s.description  =  <<-DESC
                     JsonSwiftson is a helper class for parsing JSON text and mapping it to Swift types.
 
-                    The project goals:
+                    The goals of this project:
 
                     * Map JSON text into Swift structures or classes.
                     * Keep the library tiny by using Swift generics and taking advantage of type casting features of the language.
