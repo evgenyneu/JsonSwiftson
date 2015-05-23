@@ -1,6 +1,11 @@
 # A JSON mapper for iOS/Swift
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![MIT License](https://img.shields.io/badge/license-MIT-yellow.svg?style=flat)](https://github.com/evgenyneu/JsonSwiftson/blob/master/LICENSE)
+
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
+[![CocoaPods Version](https://img.shields.io/cocoapods/v/JsonSwiftson.svg?style=flat)][cocoadocs]
+[![License](https://img.shields.io/cocoapods/l/JsonSwiftson.svg?style=flat)][cocoadocs]
+[![Platform](https://img.shields.io/cocoapods/p/JsonSwiftson.svg?style=flat)][cocoadocs]
+[cocoadocs]: http://cocoadocs.org/docsets/JsonSwiftson
+[carthage]: https://github.com/Carthage/Carthage
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
