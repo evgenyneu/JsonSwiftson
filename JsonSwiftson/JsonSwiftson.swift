@@ -21,13 +21,6 @@ A JSON mapper for Swift. It allows to parse JSON text and map it to Swift classe
 */
 public final class JsonSwiftson {
   
-  // ●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-  //
-  // MARK: - External API
-  //
-  // ●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-  
-  
   /**
 
   Indicates if the mapping was successful.
@@ -151,12 +144,8 @@ public final class JsonSwiftson {
     }
   }
   
-  // ●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-  //
   // MARK: - Internal functionality
-  //
-  // ●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-  
+
   private var parsedRawValue: AnyObject?
   private let parent: JsonSwiftson?
   
@@ -167,6 +156,7 @@ public final class JsonSwiftson {
 
   
   /**
+
   Parse JSON text into AnyObject. This function is used internally during initialization.
   Null JSON values are parsed as NSNull objects and not as nil values.
 
