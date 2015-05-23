@@ -1,6 +1,8 @@
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='256' alt='JsonSwiftson JSON parser for Swift' >
 
-# A JSON mapper for iOS/Swift 
+# A JSON mapper for iOS/Swift
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![MIT License](https://img.shields.io/badge/license-MIT-yellow.svg?style=flat)](https://github.com/evgenyneu/JsonSwiftson/blob/master/LICENSE)
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
@@ -13,7 +15,7 @@ A helper class for parsing JSON text and mapping it to Swift types.
 * Check if the mapping was successful.
 * Make sure mapping is fast.
 
-### Example 
+### Example
 
 The following is an example of serializing JSON text into a `Person` structure with JsonSwiftson library.
 
@@ -216,7 +218,7 @@ Use `??` operator after the mapper if you need to map to a non-optional type lik
 ```Swift
 let numberMapper = JsonSwiftson(json: "123")
 let number: Int = numberMapper.map() ?? 0
-    
+
 let arrayMapper = JsonSwiftson(json: "[1, 2, 3]")
 let numbers: [Int] = arrayMapper.map() ?? []
 ```
