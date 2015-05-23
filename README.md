@@ -42,26 +42,20 @@ if !j.ok { /* report error */ }
 
 ## Setup
 
-#### Add the source file (iOS 7+)
+**Add the source file (iOS 7+)**
 
 Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) file to your Xcode project.
 
-#### Setup with Carthage (iOS 8+)
+**Setup with Carthage (iOS 8+)**
 
-Alternatively, you can setup it up with Carthage by adding the following line to your Cartfile:
+Alternatively, add `github "evgenyneu/JsonSwiftson" ~> 1.0` to your Cartfile and run `carthage update`.
 
-```
-github "evgenyneu/JsonSwiftson" ~> 1.0
-```
+**Setup with CocoaPods (iOS 8+)**
 
-#### Setup with CocoaPods (iOS 8+)
+If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
-If you are using CocoaPods add this text to your Podfile:
-
-```
-use_frameworks!
-pod 'JsonSwiftson', '~> 1.0'
-```
+    use_frameworks!
+    pod 'JsonSwiftson', '~> 1.0'
 
 ## Usage
 
