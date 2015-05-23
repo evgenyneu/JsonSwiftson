@@ -1,6 +1,6 @@
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='256' alt='JsonSwiftson JSON parser for Swift' >
 
-# JSON to Swift mapper
+# A JSON mapper for iOS/Swift 
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
