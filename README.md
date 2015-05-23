@@ -1,6 +1,6 @@
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='256' alt='JsonSwiftson JSON parser for Swift' >
 
-# JSON to Swift mapper
+# A JSON mapper for iOS/Swift 
 
 A helper class for parsing JSON text and mapping it to Swift types.
 
@@ -12,7 +12,6 @@ A helper class for parsing JSON text and mapping it to Swift types.
 * Support casting to optional types.
 * Check if the mapping was successful.
 * Make sure mapping is fast.
-* Write beautiful code 🌅.
 
 ### Example 
 
@@ -42,7 +41,7 @@ Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/m
 
 #### Setup with Carthage (iOS 8+)
 
-Alternatively, you can setup it up with Carthage by adding the following line to you Cartfile:
+Alternatively, you can setup it up with Carthage by adding the following line to your Cartfile:
 
 ```
 github "evgenyneu/JsonSwiftson" ~> 1.0
@@ -50,7 +49,7 @@ github "evgenyneu/JsonSwiftson" ~> 1.0
 
 #### Setup with CocoaPods (iOS 8+)
 
-If you are using CocoaPods add this line to your Podfile:
+If you are using CocoaPods add this text to your Podfile:
 
 ```Podfile
 use_frameworks!
@@ -164,6 +163,8 @@ let person = Person(
 Verify the `ok` property to see if mapping was successful.
 Mapping fails for incorrect JSON and type casting problems.
 
+**Note**: `map` and `mapArrayOfObjects` methods always return `nil` if mapping fails.
+
 ```Swift
 let successMapper = JsonSwiftson(json: "\"Correct type\"")
 let string: String? = successMapper.map()
@@ -174,13 +175,11 @@ let number: Int? = failMapper.map()
 if !failMapper.ok { println("🐞") }
 ```
 
-**Note**: `map` and `mapArrayOfObjects` methods always return `nil` if mapping fails.
-
 ### Allow missing values
 
 Mapping fails by default if JSON value is null or attribute is missing.
 
-**Tip:** Pass `optional: true` parameter to allow missing JSON attributes or null values.
+**Tip:** Pass `optional: true` parameter to allow missing JSON attributes and null values.
 
 ```Swift
 let mapper = JsonSwiftson(json: "{ }")
