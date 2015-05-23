@@ -58,7 +58,7 @@ github "evgenyneu/JsonSwiftson" ~> 1.0
 
 If you are using CocoaPods add this text to your Podfile:
 
-```Podfile
+```
 use_frameworks!
 pod 'JsonSwiftson', '~> 1.0'
 ```
