@@ -1,4 +1,4 @@
-# A JSON mapper for iOS/Swift
+# A JSON mapper for iOS written in Swift
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/JsonSwiftson.svg?style=flat)][cocoadocs]
