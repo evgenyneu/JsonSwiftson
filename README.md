@@ -238,8 +238,6 @@ Here is a list of excellent libraries that can help taming JSON in Swift.
 * [JSONJoy-Swift](https://github.com/daltoniam/JSONJoy-Swift)
 * [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
 
-## Feedback is welcome
+## License
 
-If you have a question feel free to create an issue ticket.
-
-### •ᴥ•
+JsonSwiftson is released under the [MIT License](LICENSE).
