@@ -33,7 +33,7 @@ public final class JsonSwiftson {
   
   Initialize a new mapper.
   
-  :param: json  Provide text in JSON format.
+  - parameter json:  Provide text in JSON format.
   
   */
   public init(json: String) {
@@ -47,12 +47,12 @@ public final class JsonSwiftson {
   Map JSON value to a string, number, boolean, null or an array.
   Use optional `withClosure` parameter to map it to an optional Swift structure.
 
-  :param: optional When `true` the mapping is considered successful even when JSON value is null.
-  :param: withClosure Supplying a closure is useful together with `optional: true` parameter. It allows mapping JSON to an optional Swift structure.
-  :returns: A value from JSON.
+  - parameter optional: When `true` the mapping is considered successful even when JSON value is null.
+  - parameter withClosure: Supplying a closure is useful together with `optional: true` parameter. It allows mapping JSON to an optional Swift structure.
+  - returns: A value from JSON.
   
   */
-  public func map<T>(optional: Bool = false,
+  public func map<T>(optional optional: Bool = false,
     withClosure closure: ((JsonSwiftson)->(T?))? = nil) -> T? {
 
     if optional && parsedRawValue is NSNull {
@@ -83,12 +83,12 @@ public final class JsonSwiftson {
   Tip: use `map` method instead of `mapArrayOfObjects` for mapping arrays of simple values
   like strings, numbers and booleans.
 
-  :param: optional  When optional is `true` the mapping is successful even when JSON value is null.
-  :param: withClosure Supply mapping closure for array elements.
-  :returns: A value from JSON.
+  - parameter optional:  When optional is `true` the mapping is successful even when JSON value is null.
+  - parameter withClosure: Supply mapping closure for array elements.
+  - returns: A value from JSON.
   
   */
-  public func mapArrayOfObjects<T: CollectionType>(optional: Bool = false,
+  public func mapArrayOfObjects<T: CollectionType>(optional optional: Bool = false,
     withClosure closure: (JsonSwiftson)->(T.Generator.Element)) -> T? {
 
     if optional && parsedRawValue is NSNull {
@@ -123,7 +123,7 @@ public final class JsonSwiftson {
   public subscript(name: String) -> JsonSwiftson {
     if let dictionary = parsedRawValue as? NSDictionary {
       
-      if let value: AnyObject = dictionary[name] as AnyObject? {
+      if let value = dictionary[name] {
         
         // Property does exist in the dictionary
         return JsonSwiftson(anyObject: value, parent: self)
@@ -160,21 +160,15 @@ public final class JsonSwiftson {
   Parse JSON text into AnyObject. This function is used internally during initialization.
   Null JSON values are parsed as NSNull objects and not as nil values.
 
-  :returns: An object that can be a Dictionary, Arrays, String, numeric type, boolean or NSNull. Returns nil if parsing failed.
+  - returns: An object that can be a Dictionary, Arrays, String, numeric type, boolean or NSNull. Returns nil if parsing failed.
   
   */
   static func parseRaw(json: String) -> AnyObject? {
-
     if let encoded = json.dataUsingEncoding(NSUTF8StringEncoding) {
-      var error: NSError?
-
-      let parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(encoded,
-        options: NSJSONReadingOptions.AllowFragments,
-        error: &error)
-
-      if error != nil { return nil } // failed to parse data to JSON
-
-      return parsedObject
+      do {
+        return try NSJSONSerialization.JSONObjectWithData(encoded,
+          options: NSJSONReadingOptions.AllowFragments)
+      } catch _ {}
     }
 
     return nil // failed to convert text to NSData

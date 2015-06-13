@@ -17,7 +17,7 @@ class optionalArrayWithClosureTests: XCTestCase {
   func testOptionalArrayWithClosure() {
     let p = JsonSwiftson(json: "[ { \"planet\": \"Saturn\" }, { \"planet\": \"Moon\" } ]")
 
-    var result: [String]? = p.mapArrayOfObjects(optional: true) { m in
+    let result: [String]? = p.mapArrayOfObjects(optional: true) { m in
       m["planet"].map() ?? "✋"
     }
 
@@ -28,7 +28,7 @@ class optionalArrayWithClosureTests: XCTestCase {
   func testOptionalArrayWithClosure_null() {
     let p = JsonSwiftson(json: "null")
 
-    var result: [String]? = p.mapArrayOfObjects(optional: true) { m in
+    let result: [String]? = p.mapArrayOfObjects(optional: true) { m in
       m["planet"].map() ?? "✋"
     }
 
@@ -41,7 +41,7 @@ class optionalArrayWithClosureTests: XCTestCase {
   func testError_optionalArrayWithClosure_wrongType() {
     let p = JsonSwiftson(json: "234")
 
-    var result: [String]? = p.mapArrayOfObjects(optional: true) { m in
+    let result: [String]? = p.mapArrayOfObjects(optional: true) { m in
       m["planet"].map() ?? "✋"
     }
 
@@ -52,7 +52,7 @@ class optionalArrayWithClosureTests: XCTestCase {
   func testError_optionalArrayWithClosure_incorrectJson() {
     let p = JsonSwiftson(json: "{ incorrect")
 
-    var result: [String]? = p.mapArrayOfObjects(optional: true) { m in
+    let result: [String]? = p.mapArrayOfObjects(optional: true) { m in
       m["planet"].map() ?? "✋"
     }
 

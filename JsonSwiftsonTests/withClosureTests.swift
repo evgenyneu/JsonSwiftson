@@ -21,7 +21,7 @@ class withClosureTests: XCTestCase {
 
     let p = JsonSwiftson(json: "{ \"planet\": \"Saturn\" }")
 
-    var result: testPlanet = p.map { m in
+    let result: testPlanet = p.map { m in
       testPlanet(
         name: m["planet"].map() ?? ""
       )
@@ -37,7 +37,7 @@ class withClosureTests: XCTestCase {
 
     let p = JsonSwiftson(json: "null")
 
-    var result: testPlanet = p.map { m in
+    let result: testPlanet = p.map { m in
       testPlanet(
         name: m["planet"].map() ?? ""
       )
@@ -51,7 +51,7 @@ class withClosureTests: XCTestCase {
 
     let p = JsonSwiftson(json: "{ \"planet\": null }")
 
-    var result: testPlanet = p.map { m in
+    let result: testPlanet = p.map { m in
       testPlanet(
         name: m["planet"].map() ?? ""
       )
