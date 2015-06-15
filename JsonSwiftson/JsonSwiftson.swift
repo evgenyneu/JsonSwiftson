@@ -4,19 +4,19 @@ import Foundation
 
 A JSON mapper for Swift. It allows to parse JSON text and map it to Swift classes and structures.
 
-  struct Person {
-    let name: String
-    let age: Int
-  }
+    struct Person {
+      let name: String
+      let age: Int
+    }
 
-  let j = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
+    let j = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
 
-  let person = Person(
-    name: j["name"].map() ?? "",
-    age: j["age"].map() ?? 0
-  )
+    let person = Person(
+      name: j["name"].map() ?? "",
+      age: j["age"].map() ?? 0
+    )
 
-  if !j.ok { /* report error */ }
+    if !j.ok { /* report error */ }
 
 */
 public final class JsonSwiftson {
