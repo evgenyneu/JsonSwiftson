@@ -11,9 +11,9 @@ class performanceTests: XCTestCase {
   func testPerformanceExample() {
 
     measureBlock {
-      for x in 1...1000 {
+      for _ in 1...1000 {
         let p = JsonSwiftson(json: "\"Marsupials are cute\"")
-        let result: String = p.map() ?? ""
+        p.map() ?? ""
       }
     }
   }

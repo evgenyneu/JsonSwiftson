@@ -35,6 +35,6 @@ class TickTock {
   }
   
   func output(message: String? = nil) {
-    println(formattedWithMs(message: message))
+    print(formattedWithMs(message))
   }
 }

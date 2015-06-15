@@ -22,7 +22,7 @@ class optionalWithClosureTests: XCTestCase {
 
     let p = JsonSwiftson(json: "{ \"planet\": \"Saturn\" }")
 
-    var result: testPlanet? = p.map(optional: true) { m in
+    let result: testPlanet? = p.map(optional: true) { m in
       testPlanet(
         name: m["planet"].map() ?? ""
       )
@@ -36,7 +36,7 @@ class optionalWithClosureTests: XCTestCase {
 
     let p = JsonSwiftson(json: "null")
 
-    var result: testPlanet? = p.map(optional: true) { m in
+    let result: testPlanet? = p.map(optional: true) { m in
       testPlanet(
         name: m["planet"].map() ?? ""
       )
@@ -53,7 +53,7 @@ class optionalWithClosureTests: XCTestCase {
 
     let p = JsonSwiftson(json: "123")
 
-    var result: testPlanet? = p.map(optional: true) { m in
+    let result: testPlanet? = p.map(optional: true) { m in
       testPlanet(
         name: m["planet"].map() ?? ""
       )
@@ -67,7 +67,7 @@ class optionalWithClosureTests: XCTestCase {
 
     let p = JsonSwiftson(json: "")
 
-    var result: testPlanet? = p.map(optional: true) { m in
+    let result: testPlanet? = p.map(optional: true) { m in
       testPlanet(
         name: m["planet"].map() ?? ""
       )
@@ -81,7 +81,7 @@ class optionalWithClosureTests: XCTestCase {
 
     let p = JsonSwiftson(json: "{ \"missing\": \"value\" }")
 
-    var result: testPlanet? = p.map(optional: true) { m in
+    let result: testPlanet? = p.map(optional: true) { m in
       testPlanet(
         name: m["planet"].map() ?? ""
       )
