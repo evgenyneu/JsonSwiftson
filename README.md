@@ -57,6 +57,12 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
     use_frameworks!
     pod 'JsonSwiftson', '~> 2.0'
 
+
+**Setup in Swift 1.2 project**
+
+Use the [previous version of the library](https://github.com/evgenyneu/JsonSwiftson/wiki/Swift-1.2-version).
+
+
 ## Usage
 
 1. Add `import JsonSwiftson` to your source code if you used Carthage or CocoaPods setup.
