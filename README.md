@@ -60,7 +60,7 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
 **Setup in Swift 1.2 project**
 
-Use the [previous version of the library](https://github.com/evgenyneu/JsonSwiftson/wiki/Swift-1.2-version).
+Use the [previous version of the library](https://github.com/evgenyneu/JsonSwiftson/wiki/Swift-1.2-version-setup).
 
 
 ## Usage
