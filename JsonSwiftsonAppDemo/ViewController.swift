@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     let tick = TickTock()
     
-    for i in 1...100 {
+    for _ in 1...100 {
       let people = PeopleParser.parse(json)
       
       if people.isEmpty {
