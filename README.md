@@ -175,11 +175,11 @@ Mapping fails for incorrect JSON and type casting problems.
 ```Swift
 let successMapper = JsonSwiftson(json: "\"Correct type\"")
 let string: String? = successMapper.map()
-if successMapper.ok { println("👏👏👏") }
+if successMapper.ok { print("👏👏👏") }
 
 let failMapper = JsonSwiftson(json: "\"Wrong type\"")
 let number: Int? = failMapper.map()
-if !failMapper.ok { println("🐞") }
+if !failMapper.ok { print("🐞") }
 ```
 
 ### Allow missing values
@@ -191,7 +191,7 @@ Mapping fails by default if JSON value is null or attribute is missing.
 ```Swift
 let mapper = JsonSwiftson(json: "{ }")
 let string: String? = mapper["name"].map(optional: true)
-if mapper.ok { println("👏👏👏") }
+if mapper.ok { print("👏👏👏") }
 ```
 
 ### Allow missing objects
@@ -213,7 +213,7 @@ let person: Person? = mapper.map(optional: true) { j in
   )
 }
 
-if mapper.ok { println("👏👏👏") }
+if mapper.ok { print("👏👏👏") }
 ```
 
 ### Tip: map to a non-optional types
