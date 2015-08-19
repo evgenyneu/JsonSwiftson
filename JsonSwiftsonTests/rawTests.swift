@@ -38,15 +38,14 @@ class rawTests: XCTestCase {
     XCTAssert(result == nil)
   }
   
-//  func testError_stringWithNoQuotes_report() {
-//    let p = JsonSwiftson(json: "null")
-//    let _: [String] = p.map() ?? ["my null"]
-//    
-//    XCTAssertFalse(p.ok)
-//    XCTAssert(p.errorMappingToType == nil)
-//    XCTAssertEqual(JsonSwiftsonErrors.ParsingError, p.errorType!)
-//    XCTAssertEqual("Could not parse text into JSON", p.errorMessage!)
-//  }
+  func testError_stringWithNoQuotes_report() {
+    let p = JsonSwiftson(json: "incorrect json")
+    
+    XCTAssertFalse(p.ok)
+    XCTAssert(p.errorMappingToType == nil)
+    XCTAssertEqual(JsonSwiftsonErrors.ParsingError, p.errorType!)
+    XCTAssertEqual("Could not parse text into JSON", p.errorMessage!)
+  }
 
   // Numbers
   // -------------
