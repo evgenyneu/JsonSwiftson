@@ -70,9 +70,9 @@ public final class JsonSwiftson {
         return value
       }
     }
-
+      
     // Mapping has failed
-    reportError()
+    reportError(.TypeMappingError, errorMappingToType: String(T))
     return nil
   }
 
@@ -143,6 +143,25 @@ public final class JsonSwiftson {
       
     }
   }
+
+  private var _errorMappingToType: String?
+  
+  public var errorMappingToType: String? {
+    if let parentType = parent?._errorMappingToType { return parentType }
+    return _errorMappingToType
+  }
+  
+  private var _errorType: JsonSwiftsonErrors?
+  
+  public var errorType: JsonSwiftsonErrors? {
+    if let parentType = parent?._errorType { return parentType }
+    return _errorType
+  }
+  
+  public var errorMessage: String? {
+    if
+    return "Could not map root JSON value to String"
+  }
   
   // MARK: - Internal functionality
 
@@ -174,8 +193,16 @@ public final class JsonSwiftson {
     return nil // failed to convert text to NSData
   }
 
-  private func reportError() {
-    parent?.reportError()
+  private func reportError(errorType: JsonSwiftsonErrors? = nil, errorMappingToType: String? = nil) {
+    parent?.reportError(errorType, errorMappingToType: errorMappingToType)
     ok = false
+    _errorType = errorType
+    _errorMappingToType = errorMappingToType
   }
+}
+
+/// Contains error types
+public enum JsonSwiftsonErrors {
+  /// Error mapping JSON value to a type
+  case TypeMappingError
 }
