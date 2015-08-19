@@ -57,9 +57,9 @@ class topLevelValueTests: XCTestCase {
     let p = JsonSwiftson(json: "String without quotes is not a valid JSON value")
     let _: String = p.map() ?? "incorrect"
     
-    XCTAssertEqual("String", p.errorMappingToType!)
-    XCTAssertEqual(JsonSwiftsonErrors.TypeMappingError, p.errorType!)
-    XCTAssertEqual("Could not map root JSON value to String", p.errorMessage!)
+    XCTAssert(p.errorMappingToType == nil)
+    XCTAssertEqual(JsonSwiftsonErrors.ParsingError, p.errorType!)
+    XCTAssertEqual("Could not parse text into JSON", p.errorMessage!)
   }
 
   // Numbers

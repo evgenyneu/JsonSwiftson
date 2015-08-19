@@ -63,5 +63,8 @@ class byPropertyTests: XCTestCase {
     XCTAssertFalse(subP.ok)
 
     XCTAssertEqual("🙊", result)
+    XCTAssert(p.errorMappingToType == nil)
+    XCTAssertEqual(JsonSwiftsonErrors.CanNotGetAttribute, p.errorType)
+//    XCTAssertEqual("Could not map root JSON value to Array<String>", p.errorMessage!)
   }
 }

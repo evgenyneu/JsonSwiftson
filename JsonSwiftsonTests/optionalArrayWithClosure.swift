@@ -47,6 +47,9 @@ class optionalArrayWithClosureTests: XCTestCase {
 
     XCTAssertFalse(p.ok)
     XCTAssert(result == nil)
+    XCTAssertEqual("Array<String>", p.errorMappingToType!)
+    XCTAssertEqual(JsonSwiftsonErrors.TypeMappingError, p.errorType!)
+    XCTAssertEqual("Could not map root JSON value to Array<String>", p.errorMessage!)
   }
 
   func testError_optionalArrayWithClosure_incorrectJson() {
@@ -59,5 +62,4 @@ class optionalArrayWithClosureTests: XCTestCase {
     XCTAssertFalse(p.ok)
     XCTAssert(result == nil)
   }
-
 }

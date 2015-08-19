@@ -66,7 +66,11 @@ class optionalArrayElementsWithClosureTests: XCTestCase {
     XCTAssertFalse(p.ok)
     XCTAssertEqual(1, result.count)
     XCTAssertEqual("🐨", result[0]!)
+    XCTAssertEqual("String", p.errorMappingToType!)
+    XCTAssertEqual(JsonSwiftsonErrors.TypeMappingError, p.errorType!)
+    XCTAssertEqual("Could not map root JSON value to String", p.errorMessage!)
   }
+  
 
   func testError_optionalArrayElementsWithClosure_notAnArray() {
     let p = JsonSwiftson(json: "\"not an array\"")

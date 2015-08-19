@@ -21,13 +21,20 @@ A JSON mapper for Swift. It allows to parse JSON text and map it to Swift classe
 */
 public final class JsonSwiftson {
   
+  private var _ok = true
   /**
 
   Indicates if the mapping was successful.
   `map` and `mapArrayOfObjects` methods return `nil` in case of error.
 
   */
-  public var ok = true
+  public var ok: Bool {
+    if let parent = parent {
+      return parent.ok
+    }
+    
+    return _ok
+  }
 
   /**
   
@@ -60,7 +67,9 @@ public final class JsonSwiftson {
   */
   public func map<T>(optional optional: Bool = false,
     withClosure closure: ((JsonSwiftson)->(T?))? = nil) -> T? {
-
+      
+    if !ok { return nil }
+      
     if optional && parsedRawValue is NSNull {
       return nil // Value can be optional
     }
@@ -116,7 +125,7 @@ public final class JsonSwiftson {
       
     } else {
       // Error - value is not an array
-      reportError()
+      reportError(.TypeMappingError, errorMappingToType: String(T))
       return nil
     }
   }
@@ -144,8 +153,8 @@ public final class JsonSwiftson {
     } else {
       
       // Failed to cast JSON to dictionary
-      reportError()
-      return JsonSwiftson(json: "")
+      reportError(.CanNotGetAttribute)
+      return JsonSwiftson(anyObject: nil, parent: self)
       
     }
   }
@@ -173,6 +182,8 @@ public final class JsonSwiftson {
       return "Could not map root JSON value to \(mappingType)"
     case .ParsingError:
       return "Could not parse text into JSON"
+    case .CanNotGetAttribute:
+      return ""
     }
   }
   
@@ -206,7 +217,7 @@ public final class JsonSwiftson {
 
   private func reportError(errorType: JsonSwiftsonErrors? = nil, errorMappingToType: String? = nil) {
     parent?.reportError(errorType, errorMappingToType: errorMappingToType)
-    ok = false
+    _ok = false
     _errorType = errorType
     _errorMappingToType = errorMappingToType
   }
@@ -219,4 +230,7 @@ public enum JsonSwiftsonErrors {
   
   /// Could not parse text into JSON
   case ParsingError
+  
+  /// Could not get attribute by name
+  case CanNotGetAttribute
 }
