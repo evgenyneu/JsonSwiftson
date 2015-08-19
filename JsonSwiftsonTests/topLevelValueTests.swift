@@ -130,6 +130,15 @@ class topLevelValueTests: XCTestCase {
     XCTAssertFalse(p.ok)
     XCTAssertEqual(34535, result)
   }
+  
+  func testError_integer_report() {
+    let p = JsonSwiftson(json: "null")
+    let _: Int = p.map() ?? -1392
+    
+    XCTAssertEqual("Int", p.errorMappingToType!)
+    XCTAssertEqual(JsonSwiftsonErrors.TypeMappingError, p.errorType!)
+    XCTAssertEqual("Could not map root JSON value to Int", p.errorMessage!)
+  }
 
   // Booleans
   // -------------

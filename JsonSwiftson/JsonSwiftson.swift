@@ -38,7 +38,13 @@ public final class JsonSwiftson {
   */
   public init(json: String) {
     self.parent = nil
-    parsedRawValue = JsonSwiftson.parseRaw(json)
+    
+    do {
+      parsedRawValue = try JsonSwiftson.parseRaw(json)
+    }
+    catch _ {
+      reportError(.ParsingError, errorMappingToType: nil)
+    }
   }
 
   
@@ -159,8 +165,15 @@ public final class JsonSwiftson {
   }
   
   public var errorMessage: String? {
-    if
-    return "Could not map root JSON value to String"
+    guard let errorType = errorType else { return nil }
+    
+    switch errorType {
+    case .TypeMappingError:
+      guard let mappingType = errorMappingToType else { return "Could not map root JSON value" }
+      return "Could not map root JSON value to \(mappingType)"
+    case .ParsingError:
+      return "Could not parse text into JSON"
+    }
   }
   
   // MARK: - Internal functionality
@@ -176,18 +189,16 @@ public final class JsonSwiftson {
   
   /**
 
-  Parse JSON text into AnyObject. This function is used internally during initialization.
+  Parse JSON text into AnyObject.
   Null JSON values are parsed as NSNull objects and not as nil values.
 
   - returns: An object that can be a Dictionary, Arrays, String, numeric type, boolean or NSNull. Returns nil if parsing failed.
   
   */
-  static func parseRaw(json: String) -> AnyObject? {
+  static func parseRaw(json: String) throws -> AnyObject? {
     if let encoded = json.dataUsingEncoding(NSUTF8StringEncoding) {
-      do {
-        return try NSJSONSerialization.JSONObjectWithData(encoded,
-          options: NSJSONReadingOptions.AllowFragments)
-      } catch _ {}
+      return try NSJSONSerialization.JSONObjectWithData(encoded,
+        options: NSJSONReadingOptions.AllowFragments)
     }
 
     return nil // failed to convert text to NSData
@@ -205,4 +216,7 @@ public final class JsonSwiftson {
 public enum JsonSwiftsonErrors {
   /// Error mapping JSON value to a type
   case TypeMappingError
+  
+  /// Could not parse text into JSON
+  case ParsingError
 }

@@ -42,6 +42,15 @@ class topLevelArrayTests: XCTestCase {
     XCTAssertFalse(p.ok)
     XCTAssertEqual(["my null"], result)
   }
+  
+  func testError_array_report() {
+    let p = JsonSwiftson(json: "null")
+    let _: [String] = p.map() ?? ["my null"]
+    
+    XCTAssertEqual("Array<String>", p.errorMappingToType!)
+    XCTAssertEqual(JsonSwiftsonErrors.TypeMappingError, p.errorType!)
+    XCTAssertEqual("Could not map root JSON value to Array<String>", p.errorMessage!)
+  }
 
   // Array of numbers
   // -------------
@@ -120,6 +129,5 @@ class topLevelArrayTests: XCTestCase {
     XCTAssertEqual(["crab", "lobster", "shrimp"], result[0])
     XCTAssertEqual(["frog", "snake", "salamander"], result[1])
   }
-
 }
 
