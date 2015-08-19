@@ -183,7 +183,7 @@ public final class JsonSwiftson {
     case .ParsingError:
       return "Could not parse text into JSON"
     case .CanNotGetAttribute:
-      return ""
+      return "Could not get JSON attribute"
     }
   }
   
