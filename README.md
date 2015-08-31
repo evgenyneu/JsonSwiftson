@@ -42,6 +42,8 @@ if !j.ok { /* report error */ }
 
 ## Setup
 
+There are three ways you can add JsonSwiftson into your project.
+
 **Add the source file (iOS 7+)**
 
 Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) file to your Xcode project.
