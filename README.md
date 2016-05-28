@@ -57,6 +57,7 @@ Alternatively, add `github "evgenyneu/JsonSwiftson" ~> 2.0` to your Cartfile and
 If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
     use_frameworks!
+    target 'Your target name'
     pod 'JsonSwiftson', '~> 2.0'
 
 
