@@ -2,7 +2,7 @@ import Foundation
 import JsonSwiftson
 
 public class PeopleParser {
-  public class func parse(json: String) -> [Person] {
+  public class func parse(_ json: String) -> [Person] {
     let j = JsonSwiftson(json: json)
 
     let result:[Person] = j.mapArrayOfObjects { j in
