@@ -1,4 +1,4 @@
-# A JSON mapper for iOS written in Swift
+# A JSON parser for iOS written in Swift
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/JsonSwiftson.svg?style=flat)][cocoadocs]
@@ -44,26 +44,27 @@ if !j.ok { /* report error */ }
 
 There are three ways you can add JsonSwiftson into your project.
 
-**Add the source file (iOS 7+)**
+#### Add the source file (iOS 7+)
 
 Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) file to your Xcode project.
 
-**Setup with Carthage (iOS 8+)**
+#### Setup with Carthage (iOS 8+)
 
-Alternatively, add `github "evgenyneu/JsonSwiftson" ~> 2.0` to your Cartfile and run `carthage update`.
+Alternatively, add `github "evgenyneu/JsonSwiftson" ~> 3.0` to your Cartfile and run `carthage update`.
 
-**Setup with CocoaPods (iOS 8+)**
+#### Setup with CocoaPods (iOS 8+)
 
 If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
     use_frameworks!
     target 'Your target name'
-    pod 'JsonSwiftson', '~> 2.0'
+    pod 'JsonSwiftson', '~> 3.0'
 
 
-**Setup in Swift 1.2 project**
+#### Legacy Swift versions
 
-Use the [previous version of the library](https://github.com/evgenyneu/JsonSwiftson/wiki/Swift-1.2-version-setup).
+Setup a [previous version](https://github.com/evgenyneu/JsonSwiftson/wiki/Legacy-Swift-versions) of the library if you use an older version of Swift.
+
 
 
 ## Usage
