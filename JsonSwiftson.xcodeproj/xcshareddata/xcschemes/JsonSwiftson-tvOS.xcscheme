@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E72A6591D136DAA0038B840"
+               BlueprintIdentifier = "7E72A6841D1372400038B840"
                BuildableName = "JsonSwiftson.framework"
-               BlueprintName = "JsonSwiftson-macOS"
+               BlueprintName = "JsonSwiftson-tvOS"
                ReferencedContainer = "container:JsonSwiftson.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E72A6591D136DAA0038B840"
+            BlueprintIdentifier = "7E72A6841D1372400038B840"
             BuildableName = "JsonSwiftson.framework"
-            BlueprintName = "JsonSwiftson-macOS"
+            BlueprintName = "JsonSwiftson-tvOS"
             ReferencedContainer = "container:JsonSwiftson.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E72A6591D136DAA0038B840"
+            BlueprintIdentifier = "7E72A6841D1372400038B840"
             BuildableName = "JsonSwiftson.framework"
-            BlueprintName = "JsonSwiftson-macOS"
+            BlueprintName = "JsonSwiftson-tvOS"
             ReferencedContainer = "container:JsonSwiftson.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
