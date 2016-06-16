@@ -4,3 +4,4 @@
 
 * Converted the library to Swift 3.0.
 * Added support for macOS, tvOS and watchOS.
+* Added support Swift Package Manager.
