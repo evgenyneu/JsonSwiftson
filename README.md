@@ -1,4 +1,4 @@
-# A JSON parser for iOS written in Swift
+# A JSON parser with concise API written in Swift for iOS, macOS, tvOS and watchOS
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/JsonSwiftson.svg?style=flat)][cocoadocs]
@@ -7,18 +7,18 @@
 [cocoadocs]: http://cocoadocs.org/docsets/JsonSwiftson
 [carthage]: https://github.com/Carthage/Carthage
 
-A helper class for parsing JSON text and mapping it to Swift types.
+JsonSwiftson is a JSON parser that exposes just a single API method `map()` for mapping JSON attributes to various Swift types including arrays.
 
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='256' alt='JsonSwiftson JSON parser for Swift'>
 
-### The goals of this project
+### The features of this project
 
-* Map JSON text into Swift structures or classes.
-* Keep the library [source code](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) tiny by using Swift generics and taking advantage of type casting features of the language.
-* Expose just a single API method `map()` to handle strings, numbers, booleans and arrays of those types.
-* Support casting to optional types.
-* Check if the mapping was successful.
-* Make sure mapping is fast.
+* Maps JSON text into Swift structures or classes.
+* Keeps the library [source code](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) tiny by using Swift generics and taking advantage of type casting features of the language.
+* Exposes just a single API method `map()` to handle strings, numbers, booleans and arrays of those types.
+* Supports casting to optional types.
+* Indicates if the mapping was successful.
+* Makes sure the mapping is fast.
 
 ### Example
 
