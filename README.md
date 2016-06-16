@@ -60,6 +60,24 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
     pod 'JsonSwiftson', '~> 3.0'
 
 
+#### Setup with Swift Package Manager
+
+Add the following text to your Package.swift and run `swift build`.
+
+```Swift
+import PackageDescription
+
+let package = Package(
+    name: "YourPackageName",
+    targets: [],
+    dependencies: [
+        .Package(url: "https://github.com/evgenyneu/JsonSwiftson.git",
+                 versions: Version(3,0,0)..<Version(4,0,0))
+    ]
+)
+```
+
+
 #### Legacy Swift versions
 
 Setup a [previous version](https://github.com/evgenyneu/JsonSwiftson/wiki/Legacy-Swift-versions) of the library if you use an older version of Swift.
