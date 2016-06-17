@@ -138,7 +138,7 @@ let mapper = JsonSwiftson(json: "{ \"name\": \"Michael\" }")
 let name: String? = mapper["name"].map()
 ```
 
-You can access deeper JSON properties by using subsripts: `mapper["person"]["name"]`.
+One can use square brackets more than once to reach deeper JSON properties: `mapper["person"]["name"]`.
 
 ```Swift
 let mapper = JsonSwiftson(json: "{ \"person\": { \"name\": \"Michael\" }}")
