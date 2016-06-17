@@ -9,7 +9,7 @@
 
 JsonSwiftson is a JSON parser that exposes just a single API method `map()` for mapping JSON attributes to Swift types.
 
-<img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='256' alt='JsonSwiftson JSON parser for Swift'>
+<img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='200' alt='JsonSwiftson JSON parser for Swift'>
 
 ### The features of this project
 
