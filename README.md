@@ -88,14 +88,13 @@ Setup a [previous version](https://github.com/evgenyneu/JsonSwiftson/wiki/Legacy
 
 1) Add `import JsonSwiftson` to your source code if you used Carthage or CocoaPods setup.
 
-2) Create an instance of `JsonSwiftson` class.
+2) Create an instance of `JsonSwiftson` class and supply the JSON document for parsing.
 
 ```Swift
 let j = JsonSwiftson(json: "\"Hello World\"")
 ```
 
-3) Call `map` or `mapArrayOfObjects` methods.
-
+3) Call `map` or `mapArrayOfObjects` methods. The type of the JSON value is inferred from the context.
 
 ```Swift
 let string: String? = stringMapper.map()
@@ -109,7 +108,7 @@ if !j.ok { /* report error */ }
 
 ### Map simple values
 
-Simple values are strings, numbers and booleans. You only need to use a single method `map()`. The type of the JSON value is inferred from the context.
+Simple values are strings, numbers and booleans.
 
 
 ```Swift
