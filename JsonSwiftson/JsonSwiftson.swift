@@ -118,6 +118,9 @@ public final class JsonSwiftson {
   /**
   
   Return a new parser for JSON attribute.
+   
+  - parameter name: name of the JSON attribute.
+  - returns: a new parser object.
   
   */
   public subscript(name: String) -> JsonSwiftson {
@@ -160,6 +163,7 @@ public final class JsonSwiftson {
   Parse JSON text into AnyObject. This function is used internally during initialization.
   Null JSON values are parsed as NSNull objects and not as nil values.
 
+  - parameter json: text in JSON format.
   - returns: An object that can be a Dictionary, Arrays, String, numeric type, boolean or NSNull. Returns nil if parsing failed.
   
   */

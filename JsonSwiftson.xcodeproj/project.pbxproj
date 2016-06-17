@@ -121,8 +121,6 @@
 		7E72A6921D1372760038B840 /* JsonSwiftson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JsonSwiftson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E72A6941D1372760038B840 /* JsonSwiftson-watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JsonSwiftson-watchOS.h"; sourceTree = "<group>"; };
 		7E72A6961D1372760038B840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EEB6D171AFF1D9C009F26B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EEB6D181AFF1D9C009F26B6 /* JsonSwiftsonLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonSwiftsonLogicTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +185,6 @@
 				7E4E78761AFEF250007D583E /* JsonSwiftson */,
 				7E4E78831AFEF250007D583E /* JsonSwiftsonTests */,
 				7E4E78B41AFEF3AF007D583E /* JsonSwiftsonAppDemo */,
-				7EEB6D151AFF1D9C009F26B6 /* JsonSwiftsonLogicTests */,
 				7E72A65B1D136DAA0038B840 /* JsonSwiftson-macOS */,
 				7E72A6861D1372400038B840 /* JsonSwiftson-tvOS */,
 				7E72A6931D1372760038B840 /* JsonSwiftson-watchOS */,
@@ -325,23 +322,6 @@
 				7E72A6961D1372760038B840 /* Info.plist */,
 			);
 			path = "JsonSwiftson-watchOS";
-			sourceTree = "<group>";
-		};
-		7EEB6D151AFF1D9C009F26B6 /* JsonSwiftsonLogicTests */ = {
-			isa = PBXGroup;
-			children = (
-				7EEB6D181AFF1D9C009F26B6 /* JsonSwiftsonLogicTests.swift */,
-				7EEB6D161AFF1D9C009F26B6 /* Supporting Files */,
-			);
-			path = JsonSwiftsonLogicTests;
-			sourceTree = "<group>";
-		};
-		7EEB6D161AFF1D9C009F26B6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7EEB6D171AFF1D9C009F26B6 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1097,6 +1077,7 @@
 				7E72A68B1D1372400038B840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E72A6971D1372760038B840 /* Build configuration list for PBXNativeTarget "JsonSwiftson-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1105,6 +1086,7 @@
 				7E72A6991D1372760038B840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
