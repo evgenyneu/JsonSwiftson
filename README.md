@@ -72,8 +72,7 @@ let package = Package(
     targets: [],
     dependencies: [
         .Package(url: "https://github.com/evgenyneu/JsonSwiftson.git",
-                 versions: Version(3,0g
-                 ,0)..<Version(4,0,0))
+                 versions: Version(3,0,0)..<Version(4,0,0))
     ]
 )
 ```
