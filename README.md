@@ -37,7 +37,7 @@ let person = Person(
 if !mapper.ok { /* report error */ }
 ```
 
-## Setup
+## Setup (Swift 3.0)
 
 There are three ways you can add JsonSwiftson into your project.
 
@@ -76,7 +76,7 @@ let package = Package(
 ```
 
 
-#### Legacy Swift versions
+## Legacy Swift versions
 
 Setup a [previous version](https://github.com/evgenyneu/JsonSwiftson/wiki/Legacy-Swift-versions) of the library if you use an older version of Swift.
 
