@@ -92,7 +92,7 @@ Setup a [previous version](https://github.com/evgenyneu/JsonSwiftson/wiki/Legacy
 let mapper = JsonSwiftson(json: "{ \"person\": { \"name\": \"Michael\" }}")
 ```
 
-3) Supply a JSON attribute name and call the `map` method. The type of the JSON value is inferred from the context.
+3) Supply a JSON attributes you want to get and call the `map` method. The type of the JSON value is inferred from the context.
 
 ```Swift
 let name: String? = mapper["person"]["name"].map()
