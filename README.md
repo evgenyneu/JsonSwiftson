@@ -110,6 +110,12 @@ let name: String = mapper["person"]["name"].map() ?? "Default name"
 if !mapper.ok { /* report error */ }
 ```
 
+The `ok` property will return false if JSON parsing failed or the attribute with the given name was missing. You can allow the attribute to be missing by supplying the `optional: true` argument to the `map` method.
+
+```JSON
+let name: String? = mapper["person"]["name"].map(optional: true)
+```
+
 ### Map to simple Swift types
 
 Use the `map` method to parse JSON to types like strings, numbers and booleans.
