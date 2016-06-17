@@ -14,10 +14,10 @@
 import Foundation
 
 class TickTock {
-  var startTime:NSDate
+  var startTime:Date
   
   init() {
-    startTime = NSDate()
+    startTime = Date()
   }
   
   func measure() -> Double {
@@ -29,12 +29,12 @@ class TickTock {
     return String(format: "%.1f", elapsedMs)
   }
   
-  func formattedWithMs(message: String? = nil) -> String {
+  func formattedWithMs(_ message: String? = nil) -> String {
     let outputPrefix = message ?? "[TOCK]"
     return "\(outputPrefix) \(formatted()) ms"
   }
   
-  func output(message: String? = nil) {
+  func output(_ message: String? = nil) {
     print(formattedWithMs(message))
   }
 }

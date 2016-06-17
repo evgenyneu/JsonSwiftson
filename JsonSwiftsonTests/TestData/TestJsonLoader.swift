@@ -1,9 +1,9 @@
 import Foundation
 
 public class TestJsonLoader {
-  public func read(filename: String) -> String {
-    let bundle = NSBundle(forClass: self.dynamicType)
+  public func read(_ filename: String) -> String {
+    let bundle = Bundle(for: self.dynamicType)
     let path = bundle.pathForResource(filename, ofType: nil)
-    return try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+    return try! String(contentsOfFile: path!, encoding: String.Encoding.utf8)
   }
 }

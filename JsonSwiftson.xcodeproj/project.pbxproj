@@ -43,6 +43,12 @@
 		7E4E78DB1AFEF3F3007D583E /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E4E78D71AFEF3F3007D583E /* people.json */; };
 		7E4E78DC1AFEF3F3007D583E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D81AFEF3F3007D583E /* Person.swift */; };
 		7E4E78DD1AFEF3F3007D583E /* TestJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78D91AFEF3F3007D583E /* TestJsonLoader.swift */; };
+		7E72A65D1D136DAA0038B840 /* JsonSwiftson-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E72A65C1D136DAA0038B840 /* JsonSwiftson-macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E72A6621D136E540038B840 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
+		7E72A6881D1372400038B840 /* JsonSwiftson-tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E72A6871D1372400038B840 /* JsonSwiftson-tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E72A6951D1372760038B840 /* JsonSwiftson-watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E72A6941D1372760038B840 /* JsonSwiftson-watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E72A69A1D13728F0038B840 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
+		7E72A69B1D1372900038B840 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
 		7EEB6D0E1AFF1604009F26B6 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
 		7EEB6D0F1AFF1A28009F26B6 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
 /* End PBXBuildFile section */
@@ -106,6 +112,15 @@
 		7E4E78D71AFEF3F3007D583E /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		7E4E78D81AFEF3F3007D583E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7E4E78D91AFEF3F3007D583E /* TestJsonLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestJsonLoader.swift; sourceTree = "<group>"; };
+		7E72A65A1D136DAA0038B840 /* JsonSwiftson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JsonSwiftson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E72A65C1D136DAA0038B840 /* JsonSwiftson-macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JsonSwiftson-macOS.h"; sourceTree = "<group>"; };
+		7E72A65E1D136DAA0038B840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E72A6851D1372400038B840 /* JsonSwiftson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JsonSwiftson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E72A6871D1372400038B840 /* JsonSwiftson-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JsonSwiftson-tvOS.h"; sourceTree = "<group>"; };
+		7E72A6891D1372400038B840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E72A6921D1372760038B840 /* JsonSwiftson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JsonSwiftson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E72A6941D1372760038B840 /* JsonSwiftson-watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JsonSwiftson-watchOS.h"; sourceTree = "<group>"; };
+		7E72A6961D1372760038B840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EEB6D171AFF1D9C009F26B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EEB6D181AFF1D9C009F26B6 /* JsonSwiftsonLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonSwiftsonLogicTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +149,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E72A6561D136DAA0038B840 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A6811D1372400038B840 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A68E1D1372760038B840 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -152,6 +188,9 @@
 				7E4E78831AFEF250007D583E /* JsonSwiftsonTests */,
 				7E4E78B41AFEF3AF007D583E /* JsonSwiftsonAppDemo */,
 				7EEB6D151AFF1D9C009F26B6 /* JsonSwiftsonLogicTests */,
+				7E72A65B1D136DAA0038B840 /* JsonSwiftson-macOS */,
+				7E72A6861D1372400038B840 /* JsonSwiftson-tvOS */,
+				7E72A6931D1372760038B840 /* JsonSwiftson-watchOS */,
 				7E4E78751AFEF250007D583E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +201,9 @@
 				7E4E78741AFEF250007D583E /* JsonSwiftson.framework */,
 				7E4E787F1AFEF250007D583E /* JsonSwiftsonTests.xctest */,
 				7E4E78B31AFEF3AF007D583E /* JsonSwiftsonAppDemo.app */,
+				7E72A65A1D136DAA0038B840 /* JsonSwiftson.framework */,
+				7E72A6851D1372400038B840 /* JsonSwiftson.framework */,
+				7E72A6921D1372760038B840 /* JsonSwiftson.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,6 +300,33 @@
 			path = TestData;
 			sourceTree = "<group>";
 		};
+		7E72A65B1D136DAA0038B840 /* JsonSwiftson-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				7E72A65C1D136DAA0038B840 /* JsonSwiftson-macOS.h */,
+				7E72A65E1D136DAA0038B840 /* Info.plist */,
+			);
+			path = "JsonSwiftson-macOS";
+			sourceTree = "<group>";
+		};
+		7E72A6861D1372400038B840 /* JsonSwiftson-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				7E72A6871D1372400038B840 /* JsonSwiftson-tvOS.h */,
+				7E72A6891D1372400038B840 /* Info.plist */,
+			);
+			path = "JsonSwiftson-tvOS";
+			sourceTree = "<group>";
+		};
+		7E72A6931D1372760038B840 /* JsonSwiftson-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				7E72A6941D1372760038B840 /* JsonSwiftson-watchOS.h */,
+				7E72A6961D1372760038B840 /* Info.plist */,
+			);
+			path = "JsonSwiftson-watchOS";
+			sourceTree = "<group>";
+		};
 		7EEB6D151AFF1D9C009F26B6 /* JsonSwiftsonLogicTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +352,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E4E787A1AFEF250007D583E /* JsonSwiftson.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A6571D136DAA0038B840 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E72A65D1D136DAA0038B840 /* JsonSwiftson-macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A6821D1372400038B840 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E72A6881D1372400038B840 /* JsonSwiftson-tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A68F1D1372760038B840 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E72A6951D1372760038B840 /* JsonSwiftson-watchOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +436,60 @@
 			productReference = 7E4E78B31AFEF3AF007D583E /* JsonSwiftsonAppDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7E72A6591D136DAA0038B840 /* JsonSwiftson-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E72A6611D136DAA0038B840 /* Build configuration list for PBXNativeTarget "JsonSwiftson-macOS" */;
+			buildPhases = (
+				7E72A6551D136DAA0038B840 /* Sources */,
+				7E72A6561D136DAA0038B840 /* Frameworks */,
+				7E72A6571D136DAA0038B840 /* Headers */,
+				7E72A6581D136DAA0038B840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JsonSwiftson-macOS";
+			productName = "JsonSwiftson-macOS";
+			productReference = 7E72A65A1D136DAA0038B840 /* JsonSwiftson.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E72A6841D1372400038B840 /* JsonSwiftson-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E72A68C1D1372400038B840 /* Build configuration list for PBXNativeTarget "JsonSwiftson-tvOS" */;
+			buildPhases = (
+				7E72A6801D1372400038B840 /* Sources */,
+				7E72A6811D1372400038B840 /* Frameworks */,
+				7E72A6821D1372400038B840 /* Headers */,
+				7E72A6831D1372400038B840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JsonSwiftson-tvOS";
+			productName = "JsonSwiftson-tvOS";
+			productReference = 7E72A6851D1372400038B840 /* JsonSwiftson.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E72A6911D1372760038B840 /* JsonSwiftson-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E72A6971D1372760038B840 /* Build configuration list for PBXNativeTarget "JsonSwiftson-watchOS" */;
+			buildPhases = (
+				7E72A68D1D1372760038B840 /* Sources */,
+				7E72A68E1D1372760038B840 /* Frameworks */,
+				7E72A68F1D1372760038B840 /* Headers */,
+				7E72A6901D1372760038B840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JsonSwiftson-watchOS";
+			productName = "JsonSwiftson-watchOS";
+			productReference = 7E72A6921D1372760038B840 /* JsonSwiftson.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -350,17 +497,37 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Evgenii Neumerzhitckii";
 				TargetAttributes = {
 					7E4E78731AFEF250007D583E = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 					7E4E787E1AFEF250007D583E = {
 						CreatedOnToolsVersion = 6.4;
 					};
 					7E4E78B21AFEF3AF007D583E = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
+					};
+					7E72A6591D136DAA0038B840 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BS677JRE62;
+						DevelopmentTeamName = "Evgenii Neumerzhitckii";
+						ProvisioningStyle = Automatic;
+					};
+					7E72A6841D1372400038B840 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BS677JRE62;
+						DevelopmentTeamName = "Evgenii Neumerzhitckii";
+						ProvisioningStyle = Automatic;
+					};
+					7E72A6911D1372760038B840 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BS677JRE62;
+						DevelopmentTeamName = "Evgenii Neumerzhitckii";
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -380,6 +547,9 @@
 				7E4E78731AFEF250007D583E /* JsonSwiftson */,
 				7E4E787E1AFEF250007D583E /* JsonSwiftsonTests */,
 				7E4E78B21AFEF3AF007D583E /* JsonSwiftsonAppDemo */,
+				7E72A6591D136DAA0038B840 /* JsonSwiftson-macOS */,
+				7E72A6841D1372400038B840 /* JsonSwiftson-tvOS */,
+				7E72A6911D1372760038B840 /* JsonSwiftson-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -408,6 +578,27 @@
 				7E4E78BD1AFEF3AF007D583E /* Main.storyboard in Resources */,
 				7E4E78C21AFEF3AF007D583E /* LaunchScreen.xib in Resources */,
 				7E4E78BF1AFEF3AF007D583E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A6581D136DAA0038B840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A6831D1372400038B840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A6901D1372760038B840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +652,30 @@
 				7E09F7CB1AFEFC390013F875 /* TickTock.swift in Sources */,
 				7E4E78B81AFEF3AF007D583E /* AppDelegate.swift in Sources */,
 				7E09F7C71AFEFA710013F875 /* TestJsonLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A6551D136DAA0038B840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E72A6621D136E540038B840 /* JsonSwiftson.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A6801D1372400038B840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E72A69A1D13728F0038B840 /* JsonSwiftson.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E72A68D1D1372760038B840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E72A69B1D1372900038B840 /* JsonSwiftson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +814,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -616,6 +832,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -642,6 +860,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -658,6 +877,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -670,6 +890,155 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7E72A65F1D136DAA0038B840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "JsonSwiftson-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.JsonSwiftson-macOS";
+				PRODUCT_NAME = JsonSwiftson;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7E72A6601D136DAA0038B840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "JsonSwiftson-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.JsonSwiftson-macOS";
+				PRODUCT_NAME = JsonSwiftson;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7E72A68A1D1372400038B840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "JsonSwiftson-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.JsonSwiftson-tvOS";
+				PRODUCT_NAME = JsonSwiftson;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		7E72A68B1D1372400038B840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "JsonSwiftson-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.JsonSwiftson-tvOS";
+				PRODUCT_NAME = JsonSwiftson;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		7E72A6981D1372760038B840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "JsonSwiftson-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.JsonSwiftson-watchOS";
+				PRODUCT_NAME = JsonSwiftson;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		7E72A6991D1372760038B840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "JsonSwiftson-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.JsonSwiftson-watchOS";
+				PRODUCT_NAME = JsonSwiftson;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -711,6 +1080,31 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7E72A6611D136DAA0038B840 /* Build configuration list for PBXNativeTarget "JsonSwiftson-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E72A65F1D136DAA0038B840 /* Debug */,
+				7E72A6601D136DAA0038B840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E72A68C1D1372400038B840 /* Build configuration list for PBXNativeTarget "JsonSwiftson-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E72A68A1D1372400038B840 /* Debug */,
+				7E72A68B1D1372400038B840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7E72A6971D1372760038B840 /* Build configuration list for PBXNativeTarget "JsonSwiftson-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E72A6981D1372760038B840 /* Debug */,
+				7E72A6991D1372760038B840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

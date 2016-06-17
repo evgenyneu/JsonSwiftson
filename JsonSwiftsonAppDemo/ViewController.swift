@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     outputLabel.text = ""
   }
   
-  @IBAction func onMapJsonToSwiftTapped(sender: AnyObject) {
+  @IBAction func onMapJsonToSwiftTapped(_ sender: AnyObject) {
     let json = TestJsonLoader().read("people.json")
 
     let tick = TickTock()
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
   }
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return UIStatusBarStyle.LightContent
+    return UIStatusBarStyle.lightContent
   }
 }
 

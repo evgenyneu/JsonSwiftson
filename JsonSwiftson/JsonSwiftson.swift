@@ -52,7 +52,7 @@ public final class JsonSwiftson {
   - returns: A value from JSON.
   
   */
-  public func map<T>(optional optional: Bool = false,
+  public func map<T>(optional: Bool = false,
     withClosure closure: ((JsonSwiftson)->(T?))? = nil) -> T? {
 
     if optional && parsedRawValue is NSNull {
@@ -88,8 +88,8 @@ public final class JsonSwiftson {
   - returns: A value from JSON.
   
   */
-  public func mapArrayOfObjects<T: CollectionType>(optional optional: Bool = false,
-    withClosure closure: (JsonSwiftson)->(T.Generator.Element)) -> T? {
+  public func mapArrayOfObjects<T: Collection>(optional: Bool = false,
+    withClosure closure: (JsonSwiftson)->(T.Iterator.Element)) -> T? {
 
     if optional && parsedRawValue is NSNull {
       return nil // Value can be optional
@@ -97,7 +97,7 @@ public final class JsonSwiftson {
 
     if let items = parsedRawValue as? NSArray {
       
-      var parsedItems = Array<T.Generator.Element>()
+      var parsedItems = Array<T.Iterator.Element>()
 
       for item in items {
         let itemMapper = JsonSwiftson(anyObject: item, parent: self)
@@ -163,11 +163,11 @@ public final class JsonSwiftson {
   - returns: An object that can be a Dictionary, Arrays, String, numeric type, boolean or NSNull. Returns nil if parsing failed.
   
   */
-  static func parseRaw(json: String) -> AnyObject? {
-    if let encoded = json.dataUsingEncoding(NSUTF8StringEncoding) {
+  static func parseRaw(_ json: String) -> AnyObject? {
+    if let encoded = json.data(using: String.Encoding.utf8) {
       do {
-        return try NSJSONSerialization.JSONObjectWithData(encoded,
-          options: NSJSONReadingOptions.AllowFragments)
+        return try JSONSerialization.jsonObject(with: encoded,
+          options: JSONSerialization.ReadingOptions.allowFragments)
       } catch _ {}
     }
 
