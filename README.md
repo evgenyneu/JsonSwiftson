@@ -98,6 +98,12 @@ let mapper = JsonSwiftson(json: "{ \"person\": { \"name\": \"Michael\" }}")
 let name: String? = mapper["person"]["name"].map()
 ```
 
+The example above mapped JSON to an optional type. One can map to a non-optional by using the `??` operator and supplying a default value.
+
+```Swift
+let name: String = mapper["person"]["name"].map() ?? "Default name"
+```
+
 4) Optionally, check `ok` property to see if mapping was successful.
 
 ```Swift
