@@ -147,7 +147,7 @@ let name: String? = mapper["person"]["name"].map()
 
 ### Map arrays of simple values
 
-Here is how you can map arrays of strings, numbers and booleans.
+JsonSwiftson will automatically map to the arrays of strings, numbers and booleans.
 
 ```Swift
 // String
