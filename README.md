@@ -259,11 +259,11 @@ The project includes a demo app that runs performance benchmark. It maps a large
 
 Here is a list of excellent libraries that can help taming JSON in Swift.
 
-* [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
-* [json-swift](https://github.com/owensd/json-swift)
 * [Argo](https://github.com/thoughtbot/Argo)
+* [json-swift](https://github.com/owensd/json-swift)
 * [JSONJoy-Swift](https://github.com/daltoniam/JSONJoy-Swift)
 * [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
+* [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 
 ## License
 
