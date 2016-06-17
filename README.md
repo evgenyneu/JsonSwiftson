@@ -91,19 +91,19 @@ Setup a [previous version](https://github.com/evgenyneu/JsonSwiftson/wiki/Legacy
 2) Create an instance of `JsonSwiftson` class and supply the JSON document for parsing.
 
 ```Swift
-let j = JsonSwiftson(json: "\"Hello World\"")
+let mapper = JsonSwiftson(json: "{ \"name\": \"Michael\" }")
 ```
 
 3) Call `map` or `mapArrayOfObjects` methods. The type of the JSON value is inferred from the context.
 
 ```Swift
-let string: String? = stringMapper.map()
+let name: String? = mapper["name"].map()
 ```
 
 4) Optionally, check `ok` property to see if mapping was successful.
 
 ```Swift
-if !j.ok { /* report error */ }
+if !mapper.ok { /* report error */ }
 ```
 
 ### Map simple values
