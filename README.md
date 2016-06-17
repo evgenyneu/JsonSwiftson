@@ -106,9 +106,9 @@ let name: String? = mapper["person"]["name"].map()
 if !mapper.ok { /* report error */ }
 ```
 
-### Map simple values
+### Map simple Swift types
 
-Simple values are strings, numbers and booleans.
+Use the `map` method to parse JSON to types like strings, numbers and booleans.
 
 
 ```Swift
