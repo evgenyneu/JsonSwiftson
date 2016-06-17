@@ -104,7 +104,7 @@ The example above mapped JSON to an optional String type. One can map to a non-o
 let name: String = mapper["person"]["name"].map() ?? "Default name"
 ```
 
-4) Optionally, check `ok` property to see if mapping was successful.
+4) Finally, check `ok` property to see if mapping was successful.
 
 ```Swift
 if !mapper.ok { /* report error */ }
