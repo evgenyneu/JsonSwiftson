@@ -51,6 +51,7 @@
 		7E72A69B1D1372900038B840 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
 		7EEB6D0E1AFF1604009F26B6 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
 		7EEB6D0F1AFF1A28009F26B6 /* JsonSwiftson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E78901AFEF33C007D583E /* JsonSwiftson.swift */; };
+		7EF83D271D1381BF00A5530F /* byPropertyDeepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF83D261D1381BF00A5530F /* byPropertyDeepTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		7E72A6921D1372760038B840 /* JsonSwiftson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JsonSwiftson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E72A6941D1372760038B840 /* JsonSwiftson-watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JsonSwiftson-watchOS.h"; sourceTree = "<group>"; };
 		7E72A6961D1372760038B840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EF83D261D1381BF00A5530F /* byPropertyDeepTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = byPropertyDeepTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				7E4E789A1AFEF352007D583E /* Performance */,
 				7E4E78921AFEF352007D583E /* arrayWithClosure.swift */,
 				7E4E78931AFEF352007D583E /* byPropertyTests.swift */,
+				7EF83D261D1381BF00A5530F /* byPropertyDeepTests.swift */,
 				7E4E78941AFEF352007D583E /* optionalArrayElementsWithClosure.swift */,
 				7E4E78951AFEF352007D583E /* optionalArrayWithClosure.swift */,
 				7E4E78961AFEF352007D583E /* optionalTopLevelArrayTests.swift */,
@@ -605,6 +608,7 @@
 				7E4E78A61AFEF352007D583E /* optionalTopLevelValueTests.swift in Sources */,
 				7E4E78AC1AFEF352007D583E /* topLevelArrayTests.swift in Sources */,
 				7E4E78AE1AFEF352007D583E /* withClosureTests.swift in Sources */,
+				7EF83D271D1381BF00A5530F /* byPropertyDeepTests.swift in Sources */,
 				7E4E78A21AFEF352007D583E /* byPropertyTests.swift in Sources */,
 				7E4E78A71AFEF352007D583E /* optionalWithClosure.swift in Sources */,
 				7E4E78AB1AFEF352007D583E /* rawTests.swift in Sources */,

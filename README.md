@@ -131,11 +131,18 @@ let bool: Bool? = boolMapper.map()
 
 ### Map property by name
 
-Use square brackets to reach JSON properties by name: mapper["name"]`.
+Use square brackets to reach JSON properties by name: `mapper["name"]`.
 
 ```Swift
 let mapper = JsonSwiftson(json: "{ \"name\": \"Michael\" }")
 let name: String? = mapper["name"].map()
+```
+
+You can access deeper JSON properties by using subsripts: `mapper["person"]["name"]`.
+
+```Swift
+let mapper = JsonSwiftson(json: "{ \"person\": { \"name\": \"Michael\" }}")
+let name: String? = mapper["person"]["name"].map()
 ```
 
 ### Map arrays of simple values
