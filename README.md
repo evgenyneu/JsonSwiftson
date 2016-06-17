@@ -19,7 +19,7 @@ JsonSwiftson is a JSON parser that exposes just a single API method `map()` for 
 
 ### Example
 
-The following is an example of serializing JSON text into a `Person` structure with JsonSwiftson library.
+The following is an example of mapping a JSON text into a Swift `Person` structure.
 
 ```Swift
 struct Person {
