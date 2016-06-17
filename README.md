@@ -106,7 +106,7 @@ let name: String? = mapper["person"]["name"].map()
 if !mapper.ok { /* report error */ }
 ```
 
-### Map simple Swift types
+### Map to simple Swift types
 
 Use the `map` method to parse JSON to types like strings, numbers and booleans.
 
