@@ -86,7 +86,7 @@ Setup a [previous version](https://github.com/evgenyneu/JsonSwiftson/wiki/Legacy
 
 1) Add `import JsonSwiftson` to your source code if you used Carthage or CocoaPods setup.
 
-2) Create an instance of `JsonSwiftson` class and supply the JSON document for parsing.
+2) Create an instance of `JsonSwiftson` class and supply a JSON text for parsing.
 
 ```Swift
 let mapper = JsonSwiftson(json: "{ \"person\": { \"name\": \"Michael\" }}")
