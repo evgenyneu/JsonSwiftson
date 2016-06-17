@@ -11,8 +11,6 @@ JsonSwiftson is a JSON parser that exposes just a single API method `map()` for 
 
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='200' alt='JsonSwiftson JSON parser for Swift'>
 
-### The features of this project
-
 * Maps JSON text into Swift structures or classes.
 * Keeps the library [source code](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) tiny by using Swift generics and taking advantage of type casting features of the language.
 * Supports casting to optional types.
