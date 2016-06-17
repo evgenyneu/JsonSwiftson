@@ -29,14 +29,14 @@ struct Person {
   let age: Int
 }
 
-let j = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
+let mapper = JsonSwiftson(json: "{ \"name\": \"Peter\", \"age\": 41 }")
 
 let person = Person(
-  name: j["name"].map() ?? "",
-  age: j["age"].map() ?? 0
+  name: mapper["name"].map() ?? "",
+  age: mapper["age"].map() ?? 0
 )
 
-if !j.ok { /* report error */ }
+if !mapper.ok { /* report error */ }
 ```
 
 ## Setup
