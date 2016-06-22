@@ -60,7 +60,7 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
 #### Setup with Swift Package Manager
 
-Add the following text to your Package.swift and run `swift build`.
+Add the following text to your Package.swift file and run `swift build`.
 
 ```Swift
 import PackageDescription
