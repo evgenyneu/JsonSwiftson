@@ -1,4 +1,4 @@
-# A JSON parser with concise API written in Swift for iOS, macOS, tvOS and watchOS
+# A JSON parser with concise API written in Swift.
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/JsonSwiftson.svg?style=flat)][cocoadocs]
@@ -7,7 +7,7 @@
 [cocoadocs]: http://cocoadocs.org/docsets/JsonSwiftson
 [carthage]: https://github.com/Carthage/Carthage
 
-JsonSwiftson is a JSON parser that exposes just a single API method `map()` for mapping JSON attributes to Swift types.
+JsonSwiftson is a JSON parser that exposes just a single API method `map()` for mapping JSON attributes to Swift types. The library can be used on any platform that runs Swift.
 
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='200' alt='JsonSwiftson JSON parser for Swift'>
 
@@ -39,7 +39,7 @@ if !mapper.ok { /* report error */ }
 
 ## Setup (Swift 3.0)
 
-There are three ways you can add JsonSwiftson into your project.
+There are four ways you can add JsonSwiftson into your project.
 
 #### Add the source file (iOS 7+)
 
