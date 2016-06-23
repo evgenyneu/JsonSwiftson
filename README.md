@@ -1,4 +1,4 @@
-# A JSON parser with concise API written in Swift.
+# A JSON parser with concise API written in Swift
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/JsonSwiftson.svg?style=flat)][cocoadocs]
