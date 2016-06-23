@@ -7,7 +7,7 @@
 [cocoadocs]: http://cocoadocs.org/docsets/JsonSwiftson
 [carthage]: https://github.com/Carthage/Carthage
 
-JsonSwiftson is a JSON parser that exposes just a single API method `map()` for mapping JSON attributes to Swift types. The library can be used on any platform that runs Swift.
+JsonSwiftson is a JSON parser for mapping JSON attributes to Swift types. Mapping to different Swift types is done with just two methods: `map` and `mapArrayOfObjects`. The library can be used on any platform that runs Swift.
 
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='200' alt='JsonSwiftson JSON parser for Swift'>
 
