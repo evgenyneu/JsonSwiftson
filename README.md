@@ -11,7 +11,6 @@
 
 * Maps JSON attributes to different Swift types with just two methods: `map` and `mapArrayOfObjects`.
 * The library can be used on any platform that runs Swift.
-* Keeps the library [source code](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) tiny by using Swift generics and taking advantage of type casting features of the language.
 * Supports casting to optional types.
 * Indicates if the mapping was successful.
 
