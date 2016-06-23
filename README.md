@@ -14,7 +14,6 @@
 * Keeps the library [source code](https://github.com/evgenyneu/JsonSwiftson/blob/master/JsonSwiftson/JsonSwiftson.swift) tiny by using Swift generics and taking advantage of type casting features of the language.
 * Supports casting to optional types.
 * Indicates if the mapping was successful.
-* Makes sure the mapping is fast.
 
 ### Example
 
