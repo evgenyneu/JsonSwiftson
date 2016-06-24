@@ -13,6 +13,7 @@
 * The library can be used on any platform that runs Swift.
 * Supports casting to optional types.
 * Indicates if the mapping was successful.
+* Can be used in Swift apps for Apple devices and in open source Swift programs on other platforms.
 
 ### Example
 
