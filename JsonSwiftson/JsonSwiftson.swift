@@ -100,7 +100,7 @@ public final class JsonSwiftson {
       var parsedItems = Array<T.Iterator.Element>()
 
       for item in items {
-        let itemMapper = JsonSwiftson(anyObject: item, parent: self)
+        let itemMapper = JsonSwiftson(any: item, parent: self)
         let itemMappingResult = closure(itemMapper)
         if !ok { return nil }
         parsedItems.append(itemMappingResult)
@@ -129,12 +129,12 @@ public final class JsonSwiftson {
       if let value = dictionary[name] {
         
         // Property does exist in the dictionary
-        return JsonSwiftson(anyObject: value, parent: self)
+        return JsonSwiftson(any: value, parent: self)
         
       } else {
         
         // Property does NOT exist
-        return JsonSwiftson(anyObject: NSNull(), parent: self)
+        return JsonSwiftson(any: NSNull(), parent: self)
         
       }
       
@@ -149,25 +149,25 @@ public final class JsonSwiftson {
   
   // MARK: - Internal functionality
 
-  private var parsedRawValue: AnyObject?
+  private var parsedRawValue: Any?
   private let parent: JsonSwiftson?
   
-  private init(anyObject: AnyObject?, parent: JsonSwiftson) {
+  private init(any: Any?, parent: JsonSwiftson) {
     self.parent = parent
-    parsedRawValue = anyObject
+    parsedRawValue = any
   }
 
   
   /**
 
-  Parse JSON text into AnyObject. This function is used internally during initialization.
+  Parse JSON text into Any. This function is used internally during initialization.
   Null JSON values are parsed as NSNull objects and not as nil values.
 
   - parameter json: text in JSON format.
   - returns: An object that can be a Dictionary, Arrays, String, numeric type, boolean or NSNull. Returns nil if parsing failed.
   
   */
-  static func parseRaw(_ json: String) -> AnyObject? {
+  static func parseRaw(_ json: String) -> Any? {
     if let encoded = json.data(using: String.Encoding.utf8) {
       do {
         return try JSONSerialization.jsonObject(with: encoded,

@@ -25,7 +25,7 @@ class rawTests: XCTestCase {
   // ----- errors -----
 
   func testError_stringWithNoQuotes() {
-    let result: AnyObject?
+    let result: Any?
       = JsonSwiftson.parseRaw("String without double quotes is not a valid JSON value")
 
     XCTAssert(result == nil)
@@ -97,12 +97,12 @@ class rawTests: XCTestCase {
   // -------------
 
   func testError_empty() {
-    let result: AnyObject? = JsonSwiftson.parseRaw("")
+    let result: Any? = JsonSwiftson.parseRaw("")
     XCTAssert(result == nil)
   }
 
   func testError_empty_spaceCharactersOnly() {
-    let result: AnyObject? = JsonSwiftson.parseRaw(" ")
+    let result: Any? = JsonSwiftson.parseRaw(" ")
     XCTAssert(result == nil)
   }
 }

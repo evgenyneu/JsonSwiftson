@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     outputLabel.text = "Time: \(timeElapsed)"    
   }
   
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+  override var preferredStatusBarStyle: UIStatusBarStyle {
     return UIStatusBarStyle.lightContent
   }
 }
