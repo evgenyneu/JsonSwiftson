@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "JsonSwiftson"
-  s.version     = "3.0.2"
+  s.version     = "4.0.0"
   s.license     = { :type => "MIT" }
   s.homepage    = "https://github.com/evgenyneu/JsonSwiftson"
   s.summary     = "A JSON parser with concise API written in Swift for iOS, macOS, tvOS and watchOS"

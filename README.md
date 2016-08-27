@@ -45,7 +45,7 @@ Simply add [JsonSwiftson.swift](https://github.com/evgenyneu/JsonSwiftson/blob/m
 
 #### Setup with Carthage (iOS 8+)
 
-Alternatively, add `github "evgenyneu/JsonSwiftson" ~> 3.0` to your Cartfile and run `carthage update`.
+Alternatively, add `github "evgenyneu/JsonSwiftson" ~> 4.0` to your Cartfile and run `carthage update`.
 
 #### Setup with CocoaPods (iOS 8+)
 
@@ -53,7 +53,7 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
     use_frameworks!
     target 'Your target name'
-    pod 'JsonSwiftson', '~> 3.0'
+    pod 'JsonSwiftson', git: 'https://github.com/evgenyneu/JsonSwiftson.git', tag: '4.0.0'
 
 
 #### Setup with Swift Package Manager
