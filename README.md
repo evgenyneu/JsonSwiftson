@@ -1,11 +1,9 @@
 # A JSON parser with concise API written in Swift
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
-[![CocoaPods Version](https://img.shields.io/cocoapods/v/JsonSwiftson.svg?style=flat)][cocoadocs]
-[![License](https://img.shields.io/cocoapods/l/JsonSwiftson.svg?style=flat)][cocoadocs]
-[![Platform](https://img.shields.io/cocoapods/p/JsonSwiftson.svg?style=flat)][cocoadocs]
-[cocoadocs]: http://cocoadocs.org/docsets/JsonSwiftson
-[carthage]: https://github.com/Carthage/Carthage
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods Version](https://img.shields.io/cocoapods/v/JsonSwiftson.svg?style=flat)](http://cocoadocs.org/docsets/JsonSwiftson)
+[![License](https://img.shields.io/cocoapods/l/JsonSwiftson.svg?style=flat)](http://cocoadocs.org/docsets/JsonSwiftson)
+[![Platform](https://img.shields.io/cocoapods/p/JsonSwiftson.svg?style=flat)](http://cocoadocs.org/docsets/JsonSwiftson)
 
 <img src='https://raw.githubusercontent.com/evgenyneu/JsonSwiftson/master/Graphics/GithubLogo/json_swiftson_parser.png' width='200' alt='JsonSwiftson JSON parser for Swift'>
 
